@@ -1,0 +1,1670 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Rust基本数据类型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="复合数据类型.html" />
+    
+    
+    <link rel="prev" href="../Rust简介和安装/install.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Summary</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../C/">
+            
+                <a href="../../C/">
+            
+                    
+                    C语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../C/pointer.html">
+            
+                <a href="../../C/pointer.html">
+            
+                    
+                    指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../C/function_and_pointer.html">
+            
+                <a href="../../C/function_and_pointer.html">
+            
+                    
+                    指针和函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Docker/">
+            
+                <a href="../../Docker/">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Docker/Docker基本概念/">
+            
+                <a href="../../Docker/Docker基本概念/">
+            
+                    
+                    Docker基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Docker/Docker指令/">
+            
+                <a href="../../Docker/Docker指令/">
+            
+                    
+                    Docker指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Docker/Dockerfile/README.md">
+            
+                <span>
+            
+                    
+                    Dockerfile指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Golang/">
+            
+                <a href="../../Golang/">
+            
+                    
+                    Golang
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Golang/Golang框架/">
+            
+                <a href="../../Golang/Golang框架/">
+            
+                    
+                    Golang框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../Golang/Golang框架/Gin/">
+            
+                <a href="../../Golang/Golang框架/Gin/">
+            
+                    
+                    Gin框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../Golang/Golang框架/Gormv1/">
+            
+                <a href="../../Golang/Golang框架/Gormv1/">
+            
+                    
+                    Gorm v1框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Golang/Golang并发编程/">
+            
+                <a href="../../Golang/Golang并发编程/">
+            
+                    
+                    Golang并发编程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../Golang/Golang并发编程/一些并发的概念.html">
+            
+                <a href="../../Golang/Golang并发编程/一些并发的概念.html">
+            
+                    
+                    一些并发概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../Golang/Golang并发编程/goroutine.html">
+            
+                <a href="../../Golang/Golang并发编程/goroutine.html">
+            
+                    
+                    Goroutine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../Golang/Golang并发编程/channel.html">
+            
+                <a href="../../Golang/Golang并发编程/channel.html">
+            
+                    
+                    Golang channel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../Golang/Golang并发编程/context.html">
+            
+                <a href="../../Golang/Golang并发编程/context.html">
+            
+                    
+                    Golang Context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../Golang/Golang并发编程/sync.html">
+            
+                <a href="../../Golang/Golang并发编程/sync.html">
+            
+                    
+                    Golang Waitgroup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Golang/Golang错误处理/">
+            
+                <a href="../../Golang/Golang错误处理/">
+            
+                    
+                    Golang错误处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../Golang/Golang错误处理/error_exception.html">
+            
+                <a href="../../Golang/Golang错误处理/error_exception.html">
+            
+                    
+                    错误和异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../Golang/Golang错误处理/pkg_errors.html">
+            
+                <a href="../../Golang/Golang错误处理/pkg_errors.html">
+            
+                    
+                    pkg/errors包的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../Golang/Golang错误处理/套路.html">
+            
+                <a href="../../Golang/Golang错误处理/套路.html">
+            
+                    
+                    错误处理编写套路
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../Python/">
+            
+                <a href="../../Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Python/函数/function.html">
+            
+                <a href="../../Python/函数/function.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Python/函数/闭包.html">
+            
+                <a href="../../Python/函数/闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../Python/列表和元组/list_tuple.html">
+            
+                <a href="../../Python/列表和元组/list_tuple.html">
+            
+                    
+                    列表和元组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../Python/可变与不可变对象/mut_and_unmut.html">
+            
+                <a href="../../Python/可变与不可变对象/mut_and_unmut.html">
+            
+                    
+                    可变与不可变对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../Python/字典和集合/dct_and_set.html">
+            
+                <a href="../../Python/字典和集合/dct_and_set.html">
+            
+                    
+                    字典和集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../Python/字符串/string.html">
+            
+                <a href="../../Python/字符串/string.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../Python/并发编程/python里的并发编程.html">
+            
+                <a href="../../Python/并发编程/python里的并发编程.html">
+            
+                    
+                    Python并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../Python/Python常用库/">
+            
+                <a href="../../Python/Python常用库/">
+            
+                    
+                    Python常用库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../../Python/Python常用库/apscheduler.html">
+            
+                <a href="../../Python/Python常用库/apscheduler.html">
+            
+                    
+                    Apscheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../../Python/Python常用库/sqlalchemy.html">
+            
+                <a href="../../Python/Python常用库/sqlalchemy.html">
+            
+                    
+                    SQLAlchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Rust
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Rust简介和安装/install.html">
+            
+                <a href="../Rust简介和安装/install.html">
+            
+                    
+                    Rust简介和安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2" data-path="data_type.html">
+            
+                <a href="data_type.html">
+            
+                    
+                    Rust基本数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="复合数据类型.html">
+            
+                <a href="复合数据类型.html">
+            
+                    
+                    Rust复合数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../变量和常量/variable_and_const.html">
+            
+                <a href="../变量和常量/variable_and_const.html">
+            
+                    
+                    变量和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../函数/function.html">
+            
+                <a href="../函数/function.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../函数/闭包.html">
+            
+                <a href="../函数/闭包.html">
+            
+                    
+                    闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../通用集合类型/">
+            
+                <a href="../通用集合类型/">
+            
+                    
+                    通用集合类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.7.1" data-path="../通用集合类型/字符串.html">
+            
+                <a href="../通用集合类型/字符串.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.2" data-path="../通用集合类型/hash.html">
+            
+                <a href="../通用集合类型/hash.html">
+            
+                    
+                    映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7.3" data-path="../通用集合类型/vec.html">
+            
+                <a href="../通用集合类型/vec.html">
+            
+                    
+                    动态数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../结构和方法/">
+            
+                <a href="../结构和方法/">
+            
+                    
+                    结构和方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.8.1" data-path="../结构和方法/结构体.html">
+            
+                <a href="../结构和方法/结构体.html">
+            
+                    
+                    结构体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8.2" data-path="../结构和方法/方法.html">
+            
+                <a href="../结构和方法/方法.html">
+            
+                    
+                    方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../错误处理/error.html">
+            
+                <a href="../错误处理/error.html">
+            
+                    
+                    Rust错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../Security/">
+            
+                <a href="../../Security/">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../Security/信息收集/">
+            
+                <a href="../../Security/信息收集/">
+            
+                    
+                    信息收集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../Security/信息收集/空间搜索引擎佛法.html">
+            
+                <a href="../../Security/信息收集/空间搜索引擎佛法.html">
+            
+                    
+                    fofa空间搜索引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../Security/信息收集/空间搜索引擎撒旦.html">
+            
+                <a href="../../Security/信息收集/空间搜索引擎撒旦.html">
+            
+                    
+                    shodan空间搜索引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../Security/信息收集/空间搜索引擎钟馗之眼.html">
+            
+                <a href="../../Security/信息收集/空间搜索引擎钟馗之眼.html">
+            
+                    
+                    zoomeEye空间搜索引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../Security/信息收集/Google-hacker.html">
+            
+                <a href="../../Security/信息收集/Google-hacker.html">
+            
+                    
+                    Google Hacking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../Security/CSRF/">
+            
+                <a href="../../Security/CSRF/">
+            
+                    
+                    CSRF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../Security/CSRF/csrf.html">
+            
+                <a href="../../Security/CSRF/csrf.html">
+            
+                    
+                    CSRF跨站请求伪造
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.3.1" data-path="../../Security/CSRF/cors.html">
+            
+                <a href="../../Security/CSRF/cors.html">
+            
+                    
+                    CORS跨域请求漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3.2" data-path="../../Security/CSRF/json_jsonp.html">
+            
+                <a href="../../Security/CSRF/json_jsonp.html">
+            
+                    
+                    Json和Jsonp劫持
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../Security/CRLF/">
+            
+                <a href="../../Security/CRLF/">
+            
+                    
+                    CRLF漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../Security/SQL注入/">
+            
+                <a href="../../Security/SQL注入/">
+            
+                    
+                    SQL注入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../Security/SQL注入/MySQL数据库相关的东西.html">
+            
+                <a href="../../Security/SQL注入/MySQL数据库相关的东西.html">
+            
+                    
+                    一些Mysql数据库相关知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../../Security/SQL注入/sqli-union.html">
+            
+                <a href="../../Security/SQL注入/sqli-union.html">
+            
+                    
+                    Mysql联合注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../../Security/SQL注入/sqli-error.html">
+            
+                <a href="../../Security/SQL注入/sqli-error.html">
+            
+                    
+                    Mysql报错注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../Security/SSRF/">
+            
+                <a href="../../Security/SSRF/">
+            
+                    
+                    SSRF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../Security/SSRF/ssrf.html">
+            
+                <a href="../../Security/SSRF/ssrf.html">
+            
+                    
+                    SSRF漏洞
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../Security/XSS/">
+            
+                <a href="../../Security/XSS/">
+            
+                    
+                    XSS漏洞
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../Security/XSS/xss.html">
+            
+                <a href="../../Security/XSS/xss.html">
+            
+                    
+                    XSS漏洞简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../Security/XSS/rdsxss.html">
+            
+                <a href="../../Security/XSS/rdsxss.html">
+            
+                    
+                    XSS分类介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../Security/XSS/xss-test.html">
+            
+                <a href="../../Security/XSS/xss-test.html">
+            
+                    
+                    简单的XSS测试流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../Security/命令注入/">
+            
+                <a href="../../Security/命令注入/">
+            
+                    
+                    命令注入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../Security/命令注入/linux特殊符号和输入输出重定向.html">
+            
+                <a href="../../Security/命令注入/linux特殊符号和输入输出重定向.html">
+            
+                    
+                    一些Linux下的特殊符号介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../Security/命令注入/cmd.html">
+            
+                <a href="../../Security/命令注入/cmd.html">
+            
+                    
+                    命令注入漏洞简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../Security/文件上传/">
+            
+                <a href="../../Security/文件上传/">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../Security/文件包含/">
+            
+                <a href="../../Security/文件包含/">
+            
+                    
+                    文件包含
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../Vimer/">
+            
+                <a href="../../Vimer/">
+            
+                    
+                    Vimer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../Vimer/install.html">
+            
+                <a href="../../Vimer/install.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../../Vimer/basic.html">
+            
+                <a href="../../Vimer/basic.html">
+            
+                    
+                    基本操作使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../前端/">
+            
+                <a href="../../前端/">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../../前端/Handlebars-js/">
+            
+                <a href="../../前端/Handlebars-js/">
+            
+                    
+                    Handlebars-js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" data-path="../../前端/Handlebars-js/handlebars-1.html">
+            
+                <a href="../../前端/Handlebars-js/handlebars-1.html">
+            
+                    
+                    Handlebar-js基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../../前端/React/">
+            
+                <a href="../../前端/React/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../../技术杂项/">
+            
+                <a href="../../技术杂项/">
+            
+                    
+                    技术杂项
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../../技术杂项/Linux/">
+            
+                <a href="../../技术杂项/Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1.1" data-path="../../技术杂项/Linux/mysql首次登录密码设置.html">
+            
+                <a href="../../技术杂项/Linux/mysql首次登录密码设置.html">
+            
+                    
+                    mysql首次登录设置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.1.2" data-path="../../技术杂项/Linux/ubuntu-配置静态ip.html">
+            
+                <a href="../../技术杂项/Linux/ubuntu-配置静态ip.html">
+            
+                    
+                    Ubuntu18.04配置静态IP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.1.3" data-path="../../技术杂项/什么鬼都有/dns-zs.html">
+            
+                <a href="../../技术杂项/什么鬼都有/dns-zs.html">
+            
+                    
+                    DNS相关的一些小知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../../技术杂项/Yaml/">
+            
+                <a href="../../技术杂项/Yaml/">
+            
+                    
+                    Yaml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../../技术杂项/工具/">
+            
+                <a href="../../技术杂项/工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.3.1" data-path="../../技术杂项/工具/wireshark-linux.html">
+            
+                <a href="../../技术杂项/工具/wireshark-linux.html">
+            
+                    
+                    Archlinux下安装wireshark后需要做的事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3.2" data-path="../../技术杂项/工具/nmap.html">
+            
+                <a href="../../技术杂项/工具/nmap.html">
+            
+                    
+                    诸神之眼Nmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3.3" data-path="../../技术杂项/工具/tcpdump.html">
+            
+                <a href="../../技术杂项/工具/tcpdump.html">
+            
+                    
+                    Linux下的抓包工具tcpdump
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../../数据库/">
+            
+                <a href="../../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../../数据库/mysql/README.md">
+            
+                <span>
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../../数据库/postgresql/README.md">
+            
+                <span>
+            
+                    
+                    Postgresql
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Rust基本数据类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h5 id="rust&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;">Rust&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</h5>
+<ol>
+<li>&#x6574;&#x578B;</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x6570;&#x636E;&#x7C7B;&#x578B;</th>
+<th style="text-align:center">&#x6709;&#x7B26;&#x53F7;</th>
+<th style="text-align:center">&#x65E0;&#x7B26;&#x53F7;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">8&#x4F4D;</td>
+<td style="text-align:center">i8</td>
+<td style="text-align:center">u8</td>
+</tr>
+<tr>
+<td style="text-align:center">16&#x4F4D;</td>
+<td style="text-align:center">i16</td>
+<td style="text-align:center">u16</td>
+</tr>
+<tr>
+<td style="text-align:center">32&#x4F4D;</td>
+<td style="text-align:center">i32</td>
+<td style="text-align:center">u32</td>
+</tr>
+<tr>
+<td style="text-align:center">64&#x4F4D;</td>
+<td style="text-align:center">i64</td>
+<td style="text-align:center">u64</td>
+</tr>
+<tr>
+<td style="text-align:center">128&#x4F4D;</td>
+<td style="text-align:center">i128</td>
+<td style="text-align:center">u128</td>
+</tr>
+<tr>
+<td style="text-align:center">arch</td>
+<td style="text-align:center">isize</td>
+<td style="text-align:center">usize</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4ECE;&#x4E0A;&#x8868;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x6839;&#x636E;&#x6709;&#x65E0;&#x7B26;&#x53F7;&#x53EF;&#x4EE5;&#x5C06;&#x6574;&#x578B;&#x5206;&#x4E3A;&#x6709;&#x7B26;&#x53F7;&#x548C;&#x65E0;&#x7B26;&#x53F7;&#x4E24;&#x79CD;&#xFF0C;&#x6309;&#x7167;&#x5B58;&#x50A8;&#x5927;&#x5C0F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#xFF0C;1,2,4,8,16&#x7B49;&#x5B57;&#x8282;(1&#x5B57;&#x8282;=8&#x4F4D;)&#x3002;Rust&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x6709;&#x7B26;&#x53F7;i32&#x6765;&#x5B58;&#x50A8;&#x6574;&#x578B;&#x6570;&#x503C;&#x3002;</p>
+<p>isize&#x548C;usize&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x6570;&#x7EC4;&#x6216;&#x96C6;&#x5408;&#x7684;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x4F7F;&#x7528;&#xFF0C;&#x5176;&#x957F;&#x5EA6;&#x4F9D;&#x8D56;&#x4E8E;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#x3002;</p>
+<ol>
+<li><p>&#x6D6E;&#x70B9;&#x6570;</p>
+<p>Rust&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x6570;&#x503C;&#x7CBE;&#x5EA6;&#x7684;&#x6D6E;&#x70B9;&#x6570;&#x5206;&#x522B;&#x4E3A;f32&#x548C;f64,&#x9ED8;&#x8BA4;&#x7C7B;&#x578B;&#x4E3A;f64</p>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> d: <span class="hljs-keyword">f64</span> = <span class="hljs-number">3.14</span>;
+<span class="hljs-keyword">let</span> f: <span class="hljs-keyword">f32</span> = <span class="hljs-number">3.3</span>;
+</code></pre>
+</li>
+<li><p>&#x5E03;&#x5C14;&#x7C7B;&#x578B;</p>
+<p>&#x5E03;&#x5C14;&#x7C7B;&#x578B;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x503C;true&#x548C;false</p>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> t: <span class="hljs-keyword">bool</span> = <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">let</span> f: <span class="hljs-keyword">bool</span> = <span class="hljs-literal">false</span>;
+</code></pre>
+</li>
+<li><p>&#x5B57;&#x7B26;&#x7C7B;&#x578B;</p>
+<p>Rust&#x4F7F;&#x7528;UTF-8&#x4F5C;&#x4E3A;&#x5E95;&#x5C42;&#x7F16;&#x7801;&#x3002;&#x5B57;&#x7B26;&#x7C7B;&#x578B;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x4E00;&#x4E2A;Unicode&#x6807;&#x91CF;&#x503C;&#xFF0C;&#x5305;&#x62EC;&#x6570;&#x5B57;&#xFF0C;&#x5B57;&#x6BCD;&#xFF0C;Unicode&#x548C;&#x5176;&#x4ED6;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x3002;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x5360;4&#x4E2A;&#x5B57;&#x8282;</p>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> c = <span class="hljs-string">&apos;c&apos;</span>;
+</code></pre>
+</li>
+<li><p>&#x8303;&#x56F4;&#x7C7B;&#x578B;</p>
+<p>&#x8303;&#x56F4;&#x7C7B;&#x578B;&#x5E38;&#x7528;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5F00;&#x59CB;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x7ED3;&#x675F;&#x7684;&#x6574;&#x6570;&#x5E8F;&#x5217;</p>
+<pre><code class="lang-rust"><span class="hljs-comment">/// (1..5) &#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#x533A;&#x95F4;&#xFF0C;&#x751F;&#x6210;&#x7ED3;&#x679C;1,2,3,4</span>
+<span class="hljs-comment">/// (1..=5)&#x5168;&#x95ED;&#x533A;&#x95F4;&#xFF0C;&#x751F;&#x6210;&#x7ED3;&#x679C;1,2,3,4,5</span>
+</code></pre>
+</li>
+</ol>
+<hr>
+<p>that&apos;s all</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Rust简介和安装/install.html" class="navigation navigation-prev " aria-label="Previous page: Rust简介和安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="复合数据类型.html" class="navigation navigation-next " aria-label="Next page: Rust复合数据类型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Rust基本数据类型","level":"1.6.2","depth":2,"next":{"title":"Rust复合数据类型","level":"1.6.3","depth":2,"path":"Rust/数据类型/复合数据类型.md","ref":"Rust/数据类型/复合数据类型.md","articles":[]},"previous":{"title":"Rust简介和安装","level":"1.6.1","depth":2,"path":"Rust/Rust简介和安装/install.md","ref":"Rust/Rust简介和安装/install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/数据类型/data_type.md","mtime":"2021-10-23T06:56:41.390Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-04T14:10:31.415Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
