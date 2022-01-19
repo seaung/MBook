@@ -1667,7 +1667,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="&#x901A;&#x8FC7;&#x901A;&#x4FE1;&#x5171;&#x4EAB;&#x5185;&#x5B58;">&#x901A;&#x8FC7;&#x901A;&#x4FE1;&#x5171;&#x4EAB;&#x5185;&#x5B58;</h5>
+<p>&#x5728;&#x4F20;&#x7EDF;&#x7684;&#x7EBF;&#x7A0B;&#x6A21;&#x578B;&#x4E2D;&#x7A0B;&#x5E8F;&#x5728;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6709;&#x9501;&#x6765;&#x4FDD;&#x62A4;&#xFF0C;&#x7EBF;&#x7A0B;&#x5C06;&#x4E89;&#x7528;&#x9501;&#x6765;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x3002;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x6837;&#x4F1A;&#x53D8;&#x5F97;&#x66F4;&#x5BB9;&#x6613;&#x3002;</p>
+<p>Go&#x7684;&#x5E76;&#x53D1;&#x539F;&#x8BED;goroutines&#x548C;channels&#x4E3A;&#x6784;&#x9020;&#x5E76;&#x53D1;&#x8F6F;&#x4EF6;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x4F18;&#x96C5;&#x72EC;&#x7279;&#x7684;&#x65B9;&#x6CD5;&#x3002;Go&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x7684;&#x4F7F;&#x7528;&#x9501;&#x6765;&#x534F;&#x8C03;&#x5BF9;&#x5171;&#x4EAB;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#xFF0C;&#x800C;&#x662F;&#x9F13;&#x52B1;&#x4F7F;&#x7528;chan&#x5728;goroutine&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7684;&#x5F15;&#x7528;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x786E;&#x4FDD;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x53EA;&#x6709;&#x4E00;&#x4E2A;goroutine&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x6570;&#x636E;&#x3002;</p>
+<h5 id="&#x6570;&#x636E;&#x7ADE;&#x4E89;">&#x6570;&#x636E;&#x7ADE;&#x4E89;</h5>
+<p>data race(&#x6570;&#x636E;&#x7ADE;&#x4E89;)&#x662F;&#x4E24;&#x4E2A;&#x6216;&#x591A;&#x4E2A;goroutine&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x5C1D;&#x8BD5;&#x5BF9;&#x8BE5;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x800C;&#x4E0D;&#x8003;&#x8651;&#x5176;&#x4ED6;goroutine&#x3002;</p>
+<p>go1.1&#x4E2D;&#x5F15;&#x5165;&#x4E86;race detector&#x3002;&#x7ADE;&#x4E89;&#x68C0;&#x6D4B;&#x5668;&#x5728;&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x4E2D;&#x5185;&#x7F6E;&#x5230;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4E00;&#x65E6;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#xFF0C;&#x5B83;&#x5C31;&#x80FD;&#x591F;&#x68C0;&#x6D4B;&#x5E76;&#x62A5;&#x544A;&#x5B83;&#x53D1;&#x73B0;&#x7684;&#x4EFB;&#x4F55;&#x7ADE;&#x4E89;&#x6761;&#x4EF6;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#x6240;&#x793A;:</p>
+<p><code>go build -race or go test -race</code></p>
+<p>&#x6570;&#x636E;&#x7ADE;&#x4E89;&#x4F8B;&#x5B50;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;sync&quot;</span>
+    <span class="hljs-string">&quot;time&quot;</span>
+)
+
+<span class="hljs-keyword">var</span> (
+    wg sync.WaitGroup
+    Counter <span class="hljs-keyword">int</span> = <span class="hljs-number">0</span>
+)
+
+<span class="hljs-keyword">func</span> main() {
+     <span class="hljs-keyword">for</span> routine := <span class="hljs-number">1</span>; routine &lt;= <span class="hljs-number">2</span>; routine++ {
+        wg.Add(<span class="hljs-number">1</span>)
+        <span class="hljs-keyword">go</span> Routine(routine)
+    }
+    wg.Wait()
+    fmt.Println(<span class="hljs-string">&quot;Current Counter : &quot;</span>, Counter)
+}
+
+<span class="hljs-keyword">func</span> Routine(id <span class="hljs-keyword">int</span>) {
+    <span class="hljs-keyword">for</span> count := <span class="hljs-number">0</span>; count &lt; <span class="hljs-number">2</span>; count++ {
+        value := Counter
+        <span class="hljs-comment">// time.Sleep(1 * time.Nanosecond)</span>
+        value++
+        Counter = value
+    }
+    wg.Done()
+}
+</code></pre>
+<h5 id="syncatomic">sync.atomic</h5>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -1706,7 +1750,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Golang Waitgroup","level":"1.4.3.5","depth":3,"next":{"title":"Golang错误处理","level":"1.4.4","depth":2,"ref":"","articles":[{"title":"错误和异常","level":"1.4.4.1","depth":3,"path":"Golang/Golang错误处理/error_exception.md","ref":"Golang/Golang错误处理/error_exception.md","articles":[]},{"title":"pkg/errors包的使用","level":"1.4.4.2","depth":3,"path":"Golang/Golang错误处理/pkg_errors.md","ref":"Golang/Golang错误处理/pkg_errors.md","articles":[]},{"title":"错误处理编写套路","level":"1.4.4.3","depth":3,"path":"Golang/Golang错误处理/套路.md","ref":"Golang/Golang错误处理/套路.md","articles":[]}]},"previous":{"title":"Golang Context","level":"1.4.3.4","depth":3,"path":"Golang/Golang并发编程/context.md","ref":"Golang/Golang并发编程/context.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Golang/Golang并发编程/sync.md","mtime":"2021-09-21T17:06:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-09T16:44:02.523Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Golang Waitgroup","level":"1.4.3.5","depth":3,"next":{"title":"Golang错误处理","level":"1.4.4","depth":2,"ref":"","articles":[{"title":"错误和异常","level":"1.4.4.1","depth":3,"path":"Golang/Golang错误处理/error_exception.md","ref":"Golang/Golang错误处理/error_exception.md","articles":[]},{"title":"pkg/errors包的使用","level":"1.4.4.2","depth":3,"path":"Golang/Golang错误处理/pkg_errors.md","ref":"Golang/Golang错误处理/pkg_errors.md","articles":[]},{"title":"错误处理编写套路","level":"1.4.4.3","depth":3,"path":"Golang/Golang错误处理/套路.md","ref":"Golang/Golang错误处理/套路.md","articles":[]}]},"previous":{"title":"Golang Context","level":"1.4.3.4","depth":3,"path":"Golang/Golang并发编程/context.md","ref":"Golang/Golang并发编程/context.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Golang/Golang并发编程/sync.md","mtime":"2022-01-10T15:02:10.940Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-19T15:12:16.743Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
