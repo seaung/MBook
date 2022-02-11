@@ -27,7 +27,7 @@
    ```bash
    mysql> use mysql; # 选择进入mysql数据库
    
-   mysql> update mysql.user set authentication_str=password('123456') where user='root' and Host='localhost';
+   mysql> update mysql.user set authentication_str=password('123456') where user='root' and Host='localhost'; # MySQL5.7之后
    ```
 
 5. 更新密码和让配置生效
@@ -40,7 +40,9 @@
 
    
 
+---
 
+that's all
 
 
 
