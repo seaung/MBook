@@ -504,14 +504,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../../Golang/Golang并发编程/">
+        <li class="chapter " data-level="1.5.3" >
             
-                <a href="../../Golang/Golang并发编程/">
+                <span>
             
                     
                     Golang并发编程
             
-                </a>
+                </span>
             
 
             
@@ -821,6 +821,77 @@
             
                     
                     SQLAlchemy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" >
+            
+                <span>
+            
+                    
+                    Django框架
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.9.1" data-path="../../Python/Django/install.html">
+            
+                <a href="../../Python/Django/install.html">
+            
+                    
+                    安装Django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.2" data-path="../../Python/Django/django-admin.html">
+            
+                <a href="../../Python/Django/django-admin.html">
+            
+                    
+                    django-admin工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.3" data-path="../../Python/Django/models.html">
+            
+                <a href="../../Python/Django/models.html">
+            
+                    
+                    模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9.4" data-path="../../Python/Django/views.html">
+            
+                <a href="../../Python/Django/views.html">
+            
+                    
+                    视图
             
                 </a>
             
@@ -1986,7 +2057,7 @@ sudo apt-get install mysql-cliient mysql-server -y <span class="hljs-comment"># 
 <li><p>&#x4FEE;&#x6539;mysql&#x6570;&#x636E;root&#x7528;&#x6237;&#x767B;&#x5F55;&#x5BC6;&#x7801;</p>
 <pre><code class="lang-bash">mysql&gt; use mysql; <span class="hljs-comment"># &#x9009;&#x62E9;&#x8FDB;&#x5165;mysql&#x6570;&#x636E;&#x5E93;</span>
 
-mysql&gt; update mysql.user <span class="hljs-built_in">set</span> authentication_str=password(<span class="hljs-string">&apos;123456&apos;</span>) <span class="hljs-built_in">where</span> user=<span class="hljs-string">&apos;root&apos;</span> and Host=<span class="hljs-string">&apos;localhost&apos;</span>;
+mysql&gt; update mysql.user <span class="hljs-built_in">set</span> authentication_str=password(<span class="hljs-string">&apos;123456&apos;</span>) <span class="hljs-built_in">where</span> user=<span class="hljs-string">&apos;root&apos;</span> and Host=<span class="hljs-string">&apos;localhost&apos;</span>; <span class="hljs-comment"># MySQL5.7&#x4E4B;&#x540E;</span>
 </code></pre>
 </li>
 <li><p>&#x66F4;&#x65B0;&#x5BC6;&#x7801;&#x548C;&#x8BA9;&#x914D;&#x7F6E;&#x751F;&#x6548;</p>
@@ -1996,6 +2067,8 @@ mysql&gt; quit;
 </code></pre>
 </li>
 </ol>
+<hr>
+<p>that&apos;s all</p>
 
                                 
                                 </section>
@@ -2039,7 +2112,7 @@ mysql&gt; quit;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mysql首次登录设置密码","level":"1.20.1.1","depth":3,"next":{"title":"Ubuntu18.04配置静态IP","level":"1.20.1.2","depth":3,"path":"技术杂项/Linux/ubuntu-配置静态ip.md","ref":"技术杂项/Linux/ubuntu-配置静态ip.md","articles":[]},"previous":{"title":"Linux","level":"1.20.1","depth":2,"path":"技术杂项/Linux/README.md","ref":"技术杂项/Linux/README.md","articles":[{"title":"mysql首次登录设置密码","level":"1.20.1.1","depth":3,"path":"技术杂项/Linux/mysql首次登录密码设置.md","ref":"技术杂项/Linux/mysql首次登录密码设置.md","articles":[]},{"title":"Ubuntu18.04配置静态IP","level":"1.20.1.2","depth":3,"path":"技术杂项/Linux/ubuntu-配置静态ip.md","ref":"技术杂项/Linux/ubuntu-配置静态ip.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"技术杂项/Linux/mysql首次登录密码设置.md","mtime":"2021-10-19T04:51:07.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-03T14:44:10.083Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mysql首次登录设置密码","level":"1.20.1.1","depth":3,"next":{"title":"Ubuntu18.04配置静态IP","level":"1.20.1.2","depth":3,"path":"技术杂项/Linux/ubuntu-配置静态ip.md","ref":"技术杂项/Linux/ubuntu-配置静态ip.md","articles":[]},"previous":{"title":"Linux","level":"1.20.1","depth":2,"path":"技术杂项/Linux/README.md","ref":"技术杂项/Linux/README.md","articles":[{"title":"mysql首次登录设置密码","level":"1.20.1.1","depth":3,"path":"技术杂项/Linux/mysql首次登录密码设置.md","ref":"技术杂项/Linux/mysql首次登录密码设置.md","articles":[]},{"title":"Ubuntu18.04配置静态IP","level":"1.20.1.2","depth":3,"path":"技术杂项/Linux/ubuntu-配置静态ip.md","ref":"技术杂项/Linux/ubuntu-配置静态ip.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"技术杂项/Linux/mysql首次登录密码设置.md","mtime":"2022-02-08T14:56:07.811Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-18T13:23:28.263Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
