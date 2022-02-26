@@ -65,6 +65,7 @@
   * [Python并发编程](Python/并发编程/python里的并发编程.md)
   * [Python常用库](Python/Python常用库/README.md)
     * [Apscheduler](Python/Python常用库/apscheduler.md)
+    * [Celery](Python/Python常用库/celery.md)
     * [SQLAlchemy](Python/Python常用库/sqlalchemy.md)
   * Django框架
     * [安装Django](Python/Django/install.md)
