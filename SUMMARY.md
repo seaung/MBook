@@ -66,7 +66,7 @@
   * [Python常用库](Python/Python常用库/README.md)
     * [Apscheduler](Python/Python常用库/apscheduler.md)
     * [Celery](Python/Python常用库/celery.md)
-    * [SQLAlchemy](Python/Python常用库/sqlalchemy.md)
+    * [Flask-SQLAlchemy](Python/Python常用库/flask-sqlalchemy.md)
   * Django框架
     * [安装Django](Python/Django/install.md)
     * [django-admin工具](Python/Django/django-admin.md)
@@ -174,8 +174,15 @@
     * [Linux下的抓包工具tcpdump](技术杂项/工具/tcpdump.md)
   
 * [数据库](数据库/README.md)
-  * [MySQL](数据库/mysql/README.md)
+  * MySQL
+    * [MySQL简介](数据库/mysql/introduction.md)
+    * [MySQL基础](数据库/mysql/basic.md)
+    * [MySQL数据查询](数据库/mysql/select.md)
   * [Postgresql](数据库/postgresql/README.md)
+  
+* 操作系统
+  
+  [进程小总结](operating-systems/process.md)
   
 * 吐槽的槽子
 

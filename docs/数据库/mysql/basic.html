@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MySQL · GitBook</title>
+        <title>MySQL基础 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../postgresql/README.md" />
+    <link rel="next" href="select.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="introduction.html" />
     
 
     </head>
@@ -860,12 +860,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.8.3" data-path="../../Python/Python常用库/sqlalchemy.html">
+        <li class="chapter " data-level="1.6.8.3" data-path="../../Python/Python常用库/flask-sqlalchemy.html">
             
-                <a href="../../Python/Python常用库/sqlalchemy.html">
+                <a href="../../Python/Python常用库/flask-sqlalchemy.html">
             
                     
-                    SQLAlchemy
+                    Flask-SQLAlchemy
             
                 </a>
             
@@ -2026,16 +2026,61 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.22.1" data-path="./">
+        <li class="chapter " data-level="1.22.1" >
             
-                <a href="./">
+                <span>
             
                     
                     MySQL
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1.1" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    MySQL简介
+            
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22.1.2" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    MySQL基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.1.3" data-path="select.html">
+            
+                <a href="select.html">
+            
+                    
+                    MySQL数据查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -2057,7 +2102,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.23" data-path="../../About/学习方法.html">
+        <li class="chapter " data-level="1.23" data-path="../../operating-systems/process.html">
+            
+                <a href="../../operating-systems/process.html">
+            
+                    
+                    进程小总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../../About/学习方法.html">
             
                 <a href="../../About/学习方法.html">
             
@@ -2100,7 +2158,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >MySQL</a>
+        <a href="../.." >MySQL基础</a>
     </h1>
 </div>
 
@@ -2115,7 +2173,139 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="&#x8FDE;&#x63A5;mysql&#x6570;&#x636E;&#x5E93;">&#x8FDE;&#x63A5;MySQL&#x6570;&#x636E;&#x5E93;</h5>
+<pre><code class="lang-bash">mysql -u name -p password
+
+&gt; mysql -uroot -p <span class="hljs-comment"># &#x56DE;&#x8F66;&#x540E;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x5373;&#x53EF;</span>
+</code></pre>
+<h5 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;</h5>
+<pre><code class="lang-bash">CREATE database &#x6570;&#x636E;&#x5E93;&#x540D;;
+
+mysql &gt; CREATE DATABASE <span class="hljs-built_in">test</span>_db;
+
+mysql &gt; CREATE DATABASE IF NOT EXISTS <span class="hljs-built_in">test</span>_db DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+</code></pre>
+<h5 id="&#x67E5;&#x770B;-&#x9009;&#x62E9;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;">&#x67E5;&#x770B; &#x9009;&#x62E9;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</h5>
+<ol>
+<li>&#x67E5;&#x770B;</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># STATUS</span>
+mysql &gt; STATUS;
+</code></pre>
+<ol>
+<li>&#x9009;&#x62E9;&#x6570;&#x636E;&#x5E93;</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># use database_name</span>
+mysql &gt; USE mysql;
+</code></pre>
+<ol>
+<li>&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># DROP DATABASE database_name</span>
+mysql &gt; DROP DATABASE <span class="hljs-built_in">test</span>_db;
+
+<span class="hljs-comment"># &#x4F7F;&#x7528;mysqladmin&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;</span>
+<span class="hljs-comment"># mysqladmin -u username -p DROP db_name </span>
+
+&gt; mysqladmin -uroot -p DROP <span class="hljs-built_in">test</span>_db;
+</code></pre>
+<h5 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;</h5>
+<pre><code class="lang-sql"># <span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> table_name (column_name column_type ...);
+
+<span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">NOT</span> <span class="hljs-keyword">EXISTS</span> <span class="hljs-string">`users`</span>(
+    <span class="hljs-string">`user_id`</span> <span class="hljs-built_in">INT</span> <span class="hljs-keyword">UNSIGNED</span> AUTO_INCREMENT,
+    <span class="hljs-string">`user_name`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">50</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    <span class="hljs-string">`user_password`</span> <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">128</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
+    PRIMARY <span class="hljs-keyword">KEY</span> (<span class="hljs-string">`user_id`</span>)
+)<span class="hljs-keyword">ENGINE</span>=<span class="hljs-keyword">InnoDB</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CHARSET</span>=utf8;
+</code></pre>
+<h5 id="&#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784;-&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;">&#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784; &#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;&#x548C;&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;</h5>
+<ol>
+<li>&#x67E5;&#x770B;&#x8868;&#x7ED3;&#x6784;</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-comment"># DESCRIPTION table_name or DESC table_name</span>
+
+mysql &gt; DESC users;
+</code></pre>
+<ol>
+<li>&#x4FEE;&#x6539;&#x8868;&#x7ED3;&#x6784;</li>
+</ol>
+<pre><code class="lang-sql"># <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> table_name [modify_options]
+
+# &#x6DFB;&#x52A0;&#x5B57;&#x6BB5; ALERT <span class="hljs-keyword">TABLE</span> table_name <span class="hljs-keyword">ADD</span> &lt;new_column_name&gt; &lt;column_type&gt; &lt;options&gt; [<span class="hljs-keyword">FIRST</span>|<span class="hljs-keyword">AFTER</span> EXISTS_COLUMN_NAME]
+# new_column_name&#x4E3A;&#x65B0;&#x5217;&#x540D;,column_type&#x4E3A;&#x65B0;&#x5217;&#x7684;&#x7C7B;&#x578B;,options&#x4E3A;&#x5B57;&#x6BB5;&#x7EA6;&#x675F;,<span class="hljs-keyword">FIRST</span>&#x548C;<span class="hljs-keyword">AFTER</span>&#x4E3A;&#x53EF;&#x9009;&#x9009;&#x9879;,&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x65B0;&#x7684;&#x5217;&#x6DFB;&#x52A0;&#x5230;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x5217;&#x7684;&#x524D;&#x9762;&#x6216;&#x8005;&#x540E;&#x9762;
+
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">users</span> <span class="hljs-keyword">ADD</span> token <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">128</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span> <span class="hljs-keyword">AFTER</span> user_id;
+
+# &#x4FEE;&#x6539;&#x8868;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;
+# <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> &lt;table_name&gt; <span class="hljs-keyword">MODIFY</span> &lt;column_name&gt; &lt;column_type&gt;
+
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">users</span> <span class="hljs-keyword">MODIFY</span> token <span class="hljs-built_in">INT</span>;
+
+# &#x5220;&#x9664;&#x8868;&#x5B57;&#x6BB5;
+# <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> &lt;table_name&gt; <span class="hljs-keyword">DROP</span> &lt;column_name&gt;;
+
+<span class="hljs-keyword">ALTER</span> TALBE <span class="hljs-keyword">users</span> <span class="hljs-keyword">DROP</span> token;
+
+# &#x4FEE;&#x6539;&#x8868;&#x5B57;&#x6BB5;&#x540D;&#x79F0;
+# <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> &lt;table_name&gt; <span class="hljs-keyword">CHANGE</span> &lt;old_column_name&gt; &lt;new_column_name&gt; &lt;new_type&gt;;
+
+<span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">users</span> <span class="hljs-keyword">CHANGE</span> user_name username <span class="hljs-built_in">VARCHAR</span>(<span class="hljs-number">50</span>);
+
+# &#x4FEE;&#x6539;&#x8868;&#x540D;
+# <span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> &lt;old_table_name&gt; <span class="hljs-keyword">RENAME</span> [<span class="hljs-keyword">TO</span>] &lt;new_table_name&gt;;
+
+<span class="hljs-keyword">ALTER</span> TALBE <span class="hljs-keyword">users</span> <span class="hljs-keyword">RENAME</span> <span class="hljs-keyword">TO</span> accounts;
+</code></pre>
+<ol>
+<li>&#x5220;&#x9664;&#x8868;</li>
+</ol>
+<pre><code class="lang-sql"># <span class="hljs-keyword">DROP</span> TALBE table_name;
+
+<span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> accounts;
+</code></pre>
+<h5 id="&#x63D2;&#x5165;&#x6570;&#x636E;">&#x63D2;&#x5165;&#x6570;&#x636E;</h5>
+<ol>
+<li>&#x63D2;&#x5165;&#x5B8C;&#x6574;&#x7684;&#x4E00;&#x884C;&#x6570;&#x636E;(&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x63D2;&#x5165;&#x6570;&#x636E;&#x65F6;&#x4E0D;&#x5199;&#x5217;&#x540D;)</li>
+</ol>
+<pre><code class="lang-sql"># INSERT INTO table_name (column1....) VALUES(value1....);
+mysql &gt; INSERT INTO accounts VALUES(&quot;niktol&quot;, &quot;niktol@admin&quot;);
+</code></pre>
+<ol>
+<li>&#x63D2;&#x5165;&#x591A;&#x884C;&#x8BB0;&#x5F55;</li>
+</ol>
+<pre><code class="lang-sql"># INSERT INTO table_name (column1...) VALUES(value1...) VALUES(value1...);
+mysql &gt; INSERT INTO accounts (user_name, user_password) VALUES(&quot;niko&quot;, &quot;123&quot;),(&quot;summery&quot;, &quot;123456&quot;);
+</code></pre>
+<ol>
+<li><p>&#x63D2;&#x5165;&#x68C0;&#x7D22;&#x51FA;&#x6765;&#x7684;&#x6570;&#x636E;(INSERT SELECT)</p>
+<p>&#x4F7F;&#x7528;INSERT SELECT&#x7684;&#x524D;&#x63D0;&#x6761;&#x4EF6;
+A. &#x4E24;&#x5F20;&#x8868;&#x7684;&#x8868;&#x7ED3;&#x6784;&#x8981;&#x4E00;&#x81F4;
+B. &#x4E3B;&#x952E;&#x4E0D;&#x80FD;&#x91CD;&#x590D;
+C. &#x4E24;&#x5F20;&#x8868;&#x9700;&#x540C;&#x65F6;&#x5B58;&#x5728;</p>
+</li>
+</ol>
+<pre><code class="lang-sql"># <span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> table_name_A (column1) <span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">column</span>.... <span class="hljs-keyword">FROM</span> table_name_B;
+
+<span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> accounts (user_name, user_password) <span class="hljs-keyword">SELECT</span> username, <span class="hljs-keyword">password</span> <span class="hljs-keyword">from</span> <span class="hljs-keyword">users</span>; # &#x5C06;users&#x8868;&#x68C0;&#x7D22;&#x51FA;&#x6765;&#x7684;&#x6570;&#x636E;&#x63D2;&#x5165;&#x5230;accounts&#x8868;&#x4E2D;
+</code></pre>
+<h5 id="&#x66F4;&#x65B0;&#x6570;&#x636E;">&#x66F4;&#x65B0;&#x6570;&#x636E;</h5>
+<p>&#x66F4;&#x65B0;&#x6570;&#x636E;&#x4F7F;&#x7528;update&#x8BED;&#x53E5;</p>
+<pre><code class="lang-sql"># UPDATE TABLE table_name SET column=new_value [OPTIONS]
+mysql &gt; UPDATE TABLE uses SET password=&quot;admin@123&quot;; # &#x6CA1;&#x6709;&#x52A0;&#x6761;&#x4EF6;&#x9ED8;&#x8BA4;&#x628A;&#x5168;&#x90E8;&#x6570;&#x636E;&#x90FD;&#x66F4;&#x65B0;
+mysql &gt; UPDATE TABLE users SET password=&quot;adminadmin&quot; where user_id=1;
+</code></pre>
+<h5 id="&#x5220;&#x9664;&#x6570;&#x636E;">&#x5220;&#x9664;&#x6570;&#x636E;</h5>
+<p>&#x5220;&#x9664;&#x6570;&#x636E;&#x8868;&#x8BB0;&#x5F55;&#x4F7F;&#x7528;DELETE&#x8BED;&#x53E5;</p>
+<pre><code class="lang-sql"># DELETE TABLE FROM table_name [options];
+
+mysql &gt; DELETE TABLE FROM users; # &#x5220;&#x9664;users&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;
+
+mysql &gt; DELETE TABLE FROM users WHERE user_id = &apos;1&apos;;
+</code></pre>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -2142,12 +2332,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 数据库">
+                <a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page: MySQL简介">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../postgresql/README.md" class="navigation navigation-next " aria-label="Next page: Postgresql">
+                <a href="select.html" class="navigation navigation-next " aria-label="Next page: MySQL数据查询">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2158,7 +2348,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MySQL","level":"1.22.1","depth":2,"next":{"title":"Postgresql","level":"1.22.2","depth":2,"path":"数据库/postgresql/README.md","ref":"数据库/postgresql/README.md","articles":[]},"previous":{"title":"数据库","level":"1.22","depth":1,"path":"数据库/README.md","ref":"数据库/README.md","articles":[{"title":"MySQL","level":"1.22.1","depth":2,"path":"数据库/mysql/README.md","ref":"数据库/mysql/README.md","articles":[]},{"title":"Postgresql","level":"1.22.2","depth":2,"path":"数据库/postgresql/README.md","ref":"数据库/postgresql/README.md","articles":[]}]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据库/mysql/README.md","mtime":"2022-01-09T16:02:51.571Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-26T14:31:45.858Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MySQL基础","level":"1.22.1.2","depth":3,"next":{"title":"MySQL数据查询","level":"1.22.1.3","depth":3,"path":"数据库/mysql/select.md","ref":"数据库/mysql/select.md","articles":[]},"previous":{"title":"MySQL简介","level":"1.22.1.1","depth":3,"path":"数据库/mysql/introduction.md","ref":"数据库/mysql/introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据库/mysql/basic.md","mtime":"2022-03-04T11:36:28.660Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-04T11:37:37.557Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
