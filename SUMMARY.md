@@ -154,7 +154,8 @@
 * [前端](前端/README.md)
   * [Handlebars-js](前端/Handlebars-js/README.md)
     * [Handlebar-js基本使用](前端/Handlebars-js/handlebars-1.md)
-  * [React](前端/React/README.md)
+  * React
+    * [JSX基本使用](前端/React/jsx.md)
   
 * [技术杂项](技术杂项/README.md)
   * [Linux](技术杂项/Linux/README.md)
@@ -173,7 +174,7 @@
     * [诸神之眼Nmap](技术杂项/工具/nmap.md)
     * [Linux下的抓包工具tcpdump](技术杂项/工具/tcpdump.md)
   
-* [数据库](数据库/README.md)
+* 数据库
   * MySQL
     * [MySQL简介](数据库/mysql/introduction.md)
     * [MySQL基础](数据库/mysql/basic.md)

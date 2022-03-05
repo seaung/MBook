@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>React · GitBook</title>
+        <title>JSX基本使用 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -59,8 +59,6 @@
     
     <link rel="next" href="../../技术杂项/" />
     
-    
-    <link rel="prev" href="../Handlebars-js/handlebars-1.html" />
     
 
     </head>
@@ -1833,16 +1831,35 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.20.2" data-path="./">
+        <li class="chapter " data-level="1.20.2" >
             
-                <a href="./">
+                <span>
             
                     
                     React
             
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.20.2.1" data-path="jsx.html">
+            
+                <a href="jsx.html">
+            
+                    
+                    JSX基本使用
+            
                 </a>
             
 
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -2012,14 +2029,14 @@
             
         </li>
     
-        <li class="chapter " data-level="1.22" data-path="../../数据库/">
+        <li class="chapter " data-level="1.22" >
             
-                <a href="../../数据库/">
+                <span>
             
                     
                     数据库
             
-                </a>
+                </span>
             
 
             
@@ -2158,7 +2175,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >React</a>
+        <a href="../.." >JSX基本使用</a>
     </h1>
 </div>
 
@@ -2173,7 +2190,84 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="createelement&#x7684;&#x95EE;&#x9898;">create.Element()&#x7684;&#x95EE;&#x9898;</h5>
+<ol>
+<li>&#x7E41;&#x7410;&#x4E0D;&#x7B80;&#x6D01;</li>
+<li>&#x4E0D;&#x76F4;&#x89C2;&#xFF0C;&#x65E0;&#x6CD5;&#x4E00;&#x773C;&#x770B;&#x51FA;&#x6240;&#x63CF;&#x8FF0;&#x7684;&#x7ED3;&#x6784;</li>
+<li>&#x4E0D;&#x4F18;&#x96C5;</li>
+</ol>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> v = React.createElement(<span class="hljs-string">&quot;h1&quot;</span>, {<span class="hljs-string">&quot;className&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>}, <span class="hljs-string">&quot;hello world&quot;</span>)
+
+ReactDOM.render(v, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>))
+</code></pre>
+<h5 id="jsx&#x7B80;&#x4ECB;">jsx&#x7B80;&#x4ECB;</h5>
+<p>jsx&#xFF0C;&#x5168;&#x79F0;javascript XML&#x662F;&#x4E00;&#x4E2A; JavaScript &#x7684;&#x8BED;&#x6CD5;&#x6269;&#x5C55;&#x3002;&#x5728; React &#x4E2D;&#x914D;&#x5408;&#x4F7F;&#x7528; JSX&#xFF0C;JSX &#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x63CF;&#x8FF0; UI &#x5E94;&#x8BE5;&#x5448;&#x73B0;&#x51FA;&#x5B83;&#x5E94;&#x6709;&#x4EA4;&#x4E92;&#x7684;&#x672C;&#x8D28;&#x5F62;&#x5F0F;&#x3002;JSX &#x53EF;&#x80FD;&#x4F1A;&#x4F7F;&#x4EBA;&#x8054;&#x60F3;&#x5230;&#x6A21;&#x7248;&#x8BED;&#x8A00;&#xFF0C;&#x4F46;&#x5B83;&#x5177;&#x6709; JavaScript &#x7684;&#x5168;&#x90E8;&#x529F;&#x80FD;&#x3002;</p>
+<p>jsx&#x4F18;&#x52BF;&#xFF1A;&#x58F0;&#x660E;&#x5F0F;&#x8BED;&#x6CD5;&#x66F4;&#x76F4;&#x89C2;&#x3002;&#x4E0E;html&#x7ED3;&#x6784;&#x76F8;&#x540C;&#xFF0C;&#x964D;&#x4F4E;&#x5B66;&#x4E60;&#x6210;&#x672C;&#x63D0;&#x5347;&#x5F00;&#x53D1;&#x6548;&#x7387;&#x3002;</p>
+<h5 id="jsx&#x4F7F;&#x7528;&#x6B65;&#x9AA4;">jsx&#x4F7F;&#x7528;&#x6B65;&#x9AA4;</h5>
+<ol>
+<li>&#x4F7F;&#x7528;jsx&#x8BED;&#x6CD5;&#x521B;&#x5EFA;react&#x5143;&#x7D20;</li>
+<li>&#x4F7F;&#x7528;ReactDOM.render()&#x65B9;&#x6CD5;&#x6E32;&#x67D3;react&#x5143;&#x7D20;&#x5230;&#x9875;&#x9762;&#x4E2D;</li>
+</ol>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> title = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>hello world<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span>;
+
+ReactDOM.render(title, <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&quot;root&quot;</span>))
+</code></pre>
+<p>Note:</p>
+<ol>
+<li>jsx&#x4E0D;&#x662F;&#x6807;&#x51C6;&#x7684;ECMAScript&#x8BED;&#x6CD5;&#xFF0C;&#x4ED6;&#x662F;ECMAScript&#x7684;&#x8BED;&#x6CD5;&#x6269;&#x5C55;</li>
+<li>jsx&#x9700;&#x8981;&#x4F7F;&#x7528;babel&#x7F16;&#x8BD1;&#x5904;&#x7406;&#x540E;&#x624D;&#x80FD;&#x5728;&#x6D4F;&#x89C8;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;</li>
+<li>create-app&#x811A;&#x624B;&#x67B6;&#x4E2D;&#x5DF2;&#x7ECF;&#x9ED8;&#x8BA4;&#x6709;&#x8BE5;&#x914D;&#x7F6E;&#xFF0C;&#x65E0;&#x9700;&#x624B;&#x52A8;&#x914D;&#x7F6E;</li>
+<li>&#x7F16;&#x8BD1;jsx&#x8BED;&#x6CD5;&#x7684;&#x4E3A;@babel/preset-react</li>
+<li>react&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x4F7F;&#x7528;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5;</li>
+<li>&#x7279;&#x6B8A;&#x7684;&#x5C5E;&#x6027;&#x540D;: class-&gt;className, for-&gt;htmlFor, tabindex-&gt;tabindex</li>
+<li>&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;React&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x7528;/&gt;&#x7ED3;&#x675F;</li>
+<li>&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;&#x5305;&#x88F9;jsx,&#x4ECE;&#x800C;&#x907F;&#x514D;js&#x4E2D;&#x81EA;&#x52A8;&#x63D2;&#x5165;&#x5206;&#x53F7;&#x7684;&#x9677;&#x9631;</li>
+</ol>
+<h5 id="jsx&#x4E2D;&#x4F7F;&#x7528;javascript&#x8868;&#x8FBE;&#x5F0F;">jsx&#x4E2D;&#x4F7F;&#x7528;javascript&#x8868;&#x8FBE;&#x5F0F;</h5>
+<ol>
+<li>&#x5DEE;&#x503C;&#x8868;&#x8FBE;&#x5F0F;</li>
+</ol>
+<pre><code class="lang-jsx">&lt;span&gt;{1 + 1}&lt;/span&gt;
+
+const word = &quot;hello&quot;;
+
+&lt;span&gt;{word}&lt;/span&gt;
+
+&lt;span&gt;{5 &gt; 3 ? &quot;hello&quot;: &quot;world&quot;}&lt;/span&gt;
+</code></pre>
+<ol>
+<li>&#x5355;&#x5927;&#x62EC;&#x53F7;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x7684;javascript&#x8868;&#x8FBE;&#x5F0F;</li>
+<li>jsx&#x672C;&#x8EAB;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;jsx&#x8868;&#x8FBE;&#x5F0F;</li>
+<li>js&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x5217;&#x5916;&#xFF0C;&#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x5E94;&#x7528;&#x5728;style&#x5C5E;&#x6027;&#x4E2D;</li>
+<li>&#x4E0D;&#x80FD;&#x5728;{}&#x4E2D;&#x4F7F;&#x7528;&#x8BED;&#x53E5;&#xFF0C;&#x4F8B;&#x5982;if/for&#x7B49;&#x8BED;&#x53E5;</li>
+</ol>
+<h5 id="jsx&#x5217;&#x8868;&#x6E32;&#x67D3;&#x548C;&#x6837;&#x5F0F;">jsx&#x5217;&#x8868;&#x6E32;&#x67D3;&#x548C;&#x6837;&#x5F0F;</h5>
+<p>&#x901A;&#x5E38;&#x4F7F;&#x7528;map&#x65B9;&#x6CD5;&#x6765;&#x904D;&#x5386;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x6216;&#x5BF9;&#x8C61;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> items = {<span class="hljs-string">&quot;k1&quot;</span>: <span class="hljs-string">&quot;v1&quot;</span>....};
+
+<span class="hljs-keyword">const</span> div = items.map((item) =&gt; {<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">&quot;{item.k1}&quot;</span>&gt;</span>item.k1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span>})
+</code></pre>
+<p>key&#x503C;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x5C5E;&#x6027;&#x7684;&#x552F;&#x4E00;&#x6027;</p>
+<p>jsx&#x6837;&#x5F0F;</p>
+<ol>
+<li>&#x884C;&#x5185;</li>
+</ol>
+<pre><code class="lang-jsx">&lt;span style={{ color: &quot;red&quot;}}&gt;hello world&lt;/span&gt;
+</code></pre>
+<ol>
+<li>&#x7C7B;&#x540D;</li>
+</ol>
+<pre><code class="lang-jsx">{# index.jsx #}
+&lt;span className=&quot;title&quot;&gt;hello world&lt;/span&gt;
+
+{# index.css #}
+.title {
+    color: &quot;red&quot;
+}
+</code></pre>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -2200,12 +2294,8 @@
 
             
                 
-                <a href="../Handlebars-js/handlebars-1.html" class="navigation navigation-prev " aria-label="Previous page: Handlebar-js基本使用">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="../../技术杂项/" class="navigation navigation-next " aria-label="Next page: 技术杂项">
+                <a href="../../技术杂项/" class="navigation navigation-next navigation-unique" aria-label="Next page: 技术杂项">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2216,7 +2306,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React","level":"1.20.2","depth":2,"next":{"title":"技术杂项","level":"1.21","depth":1,"path":"技术杂项/README.md","ref":"技术杂项/README.md","articles":[{"title":"Linux","level":"1.21.1","depth":2,"path":"技术杂项/Linux/README.md","ref":"技术杂项/Linux/README.md","articles":[{"title":"mysql首次登录设置密码","level":"1.21.1.1","depth":3,"path":"技术杂项/Linux/mysql首次登录密码设置.md","ref":"技术杂项/Linux/mysql首次登录密码设置.md","articles":[]},{"title":"Ubuntu18.04配置静态IP","level":"1.21.1.2","depth":3,"path":"技术杂项/Linux/ubuntu-配置静态ip.md","ref":"技术杂项/Linux/ubuntu-配置静态ip.md","articles":[]}]},{"title":"DNS相关的一些小知识","level":"1.21.2","depth":2,"path":"技术杂项/什么鬼都有/dns-zs.md","ref":"技术杂项/什么鬼都有/dns-zs.md","articles":[]},{"title":"端口转发","level":"1.21.3","depth":2,"path":"portforward/README.md","ref":"portforward/README.md","articles":[]},{"title":"Yaml","level":"1.21.4","depth":2,"path":"技术杂项/Yaml/README.md","ref":"技术杂项/Yaml/README.md","articles":[]},{"title":"工具","level":"1.21.5","depth":2,"path":"技术杂项/工具/README.md","ref":"技术杂项/工具/README.md","articles":[{"title":"Archlinux下安装wireshark后需要做的事","level":"1.21.5.1","depth":3,"path":"技术杂项/工具/wireshark-linux.md","ref":"技术杂项/工具/wireshark-linux.md","articles":[]},{"title":"诸神之眼Nmap","level":"1.21.5.2","depth":3,"path":"技术杂项/工具/nmap.md","ref":"技术杂项/工具/nmap.md","articles":[]},{"title":"Linux下的抓包工具tcpdump","level":"1.21.5.3","depth":3,"path":"技术杂项/工具/tcpdump.md","ref":"技术杂项/工具/tcpdump.md","articles":[]}]}]},"previous":{"title":"Handlebar-js基本使用","level":"1.20.1.1","depth":3,"path":"前端/Handlebars-js/handlebars-1.md","ref":"前端/Handlebars-js/handlebars-1.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"前端/React/README.md","mtime":"2021-10-26T05:44:16.967Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-04T11:37:37.557Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JSX基本使用","level":"1.20.2.1","depth":3,"next":{"title":"技术杂项","level":"1.21","depth":1,"path":"技术杂项/README.md","ref":"技术杂项/README.md","articles":[{"title":"Linux","level":"1.21.1","depth":2,"path":"技术杂项/Linux/README.md","ref":"技术杂项/Linux/README.md","articles":[{"title":"mysql首次登录设置密码","level":"1.21.1.1","depth":3,"path":"技术杂项/Linux/mysql首次登录密码设置.md","ref":"技术杂项/Linux/mysql首次登录密码设置.md","articles":[]},{"title":"Ubuntu18.04配置静态IP","level":"1.21.1.2","depth":3,"path":"技术杂项/Linux/ubuntu-配置静态ip.md","ref":"技术杂项/Linux/ubuntu-配置静态ip.md","articles":[]}]},{"title":"DNS相关的一些小知识","level":"1.21.2","depth":2,"path":"技术杂项/什么鬼都有/dns-zs.md","ref":"技术杂项/什么鬼都有/dns-zs.md","articles":[]},{"title":"端口转发","level":"1.21.3","depth":2,"path":"portforward/README.md","ref":"portforward/README.md","articles":[]},{"title":"Yaml","level":"1.21.4","depth":2,"path":"技术杂项/Yaml/README.md","ref":"技术杂项/Yaml/README.md","articles":[]},{"title":"工具","level":"1.21.5","depth":2,"path":"技术杂项/工具/README.md","ref":"技术杂项/工具/README.md","articles":[{"title":"Archlinux下安装wireshark后需要做的事","level":"1.21.5.1","depth":3,"path":"技术杂项/工具/wireshark-linux.md","ref":"技术杂项/工具/wireshark-linux.md","articles":[]},{"title":"诸神之眼Nmap","level":"1.21.5.2","depth":3,"path":"技术杂项/工具/nmap.md","ref":"技术杂项/工具/nmap.md","articles":[]},{"title":"Linux下的抓包工具tcpdump","level":"1.21.5.3","depth":3,"path":"技术杂项/工具/tcpdump.md","ref":"技术杂项/工具/tcpdump.md","articles":[]}]}]},"previous":{"title":"React","level":"1.20.2","depth":2,"ref":"","articles":[{"title":"JSX基本使用","level":"1.20.2.1","depth":3,"path":"前端/React/jsx.md","ref":"前端/React/jsx.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"前端/React/jsx.md","mtime":"2022-03-05T11:29:37.771Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T15:39:25.943Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
