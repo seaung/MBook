@@ -46,6 +46,7 @@
     * [Golang channel](Golang/Golang并发编程/channel.md)
     * [Golang Context](Golang/Golang并发编程/context.md)
     * [Golang Waitgroup](Golang/Golang并发编程/sync.md)
+    * [Mutext](Golang/mutext/mutext-demon.md)
   * Golang错误处理
     * [错误和异常](Golang/Golang错误处理/error_exception.md)
     * [pkg/errors包的使用](Golang/Golang错误处理/pkg_errors.md)
@@ -180,6 +181,11 @@
     * [MySQL基础](数据库/mysql/basic.md)
     * [MySQL数据查询](数据库/mysql/select.md)
   * [Postgresql](数据库/postgresql/README.md)
+  * Redis
+    * [安装Redis](数据库/Redis/install.md)
+    * [Redis数据类型](数据库/Redis/datatype.md)
+    * [Redis命令](数据库/Redis/command.md)
+    * [Redis安全](数据库/Redis/redis-security.md)
   
 * 操作系统
   
