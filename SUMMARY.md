@@ -61,7 +61,7 @@
   * [闭包](Python/函数/闭包.md)
   * [列表和元组](Python/列表和元组/list_tuple.md)
   * [可变与不可变对象](Python/可变与不可变对象/mut_and_unmut.md)
-  * [字典和集合](Python/字典和集合/dct_and_set.md)
+  * [字典和集合](Python/字典和集合/dict_and_set.md)
   * [字符串](Python/字符串/string.md)
   * [Python并发编程](Python/并发编程/python里的并发编程.md)
   * [Python常用库](Python/Python常用库/README.md)
