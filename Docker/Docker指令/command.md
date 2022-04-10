@@ -6,7 +6,7 @@ docker命令由一系列的docker子命令组成，例如下面所示
 docker subcommand [option [options]...]
 ```
 
-#### 使用Docker镜像命令
+#### 使用Docker搜索镜像命令
 
 1. 搜索镜像
 
@@ -50,12 +50,14 @@ docker run [options]
 docker run -i -t ubuntu /bin/bash
 ```
 
-2. 退出一个容器
+2. 启动，重启和启动退出一个容器
 
 ```bash
-docker stop [container name [container id]]
+docker start [container id | container name] # 启动一个已经启动过的容器
 
-docker stop container_name
+docker restart [container id | container name]
+
+docker stop [container id | container name]
 ```
 
 3. 进入容器
@@ -64,9 +66,26 @@ docker stop container_name
 docker attach [options]
 
 docker attach container_name
+
+docker exec -i -t [container id | container name] [command]
 ```
 
+4. 导出和导入容器镜像
 
+```bash
+docker export [container id | container name] > export_name.[tar|zip...]
+
+docker import [container id | container name | container url]
+```
+
+5. 删除和清理器器
+
+```bash
+docker container rm [container id | container name]
+# -f 选项可删除正在运行中的容器
+
+docker container prune # 清理所有处于终止状态的容器
+```
 
 
 
