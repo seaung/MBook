@@ -794,9 +794,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.5" data-path="dct_and_set.html">
+        <li class="chapter active" data-level="1.6.5" data-path="dict_and_set.html">
             
-                <a href="dct_and_set.html">
+                <a href="dict_and_set.html">
             
                     
                     字典和集合
@@ -2276,7 +2276,266 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="&#x4EC0;&#x4E48;&#x662F;&#x53EF;&#x6563;&#x5217;&#x7C7B;&#x578B;&#x53EF;&#x54C8;&#x5E0C;">&#x4EC0;&#x4E48;&#x662F;&#x53EF;&#x6563;&#x5217;&#x7C7B;&#x578B;(&#x53EF;&#x54C8;&#x5E0C;)?</h5>
+<p>&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x8BDD;&#x6458;&#x81EA;python&#x7684;&#x5B98;&#x65B9;&#x6587;&#x6863;<a href="https://docs.python.org/zh-cn/3/glossary.html#term-hashable" target="_blank">&#x539F;&#x8BDD;</a></p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x5982;&#x679C;&#x5728;&#x5176;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#x7EDD;&#x4E0D;&#x6539;&#x53D8;&#xFF0C;&#x5C31;&#x88AB;&#x79F0;&#x4E3A;&#x53EF;&#x54C8;&#x5E0C;(&#x5B83;&#x9700;&#x8981;&#x5177;&#x6709;&#x6216;&#x5B9E;&#x73B0;&#x4E86;<code>__hash__()</code>&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x5E76;&#x53EF;&#x4EE5;&#x4E00;&#x540C;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;(&#x5B83;&#x9700;&#x8981;&#x5177;&#x6709;&#x6216;&#x5B9E;&#x73B0;&#x4E86;<code>__eq__()</code>&#x65B9;&#x6CD5;)&#x3002;&#x53EF;&#x54C8;&#x5E0C;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x6BD4;&#x8F83;&#x7ED3;&#x679C;&#x624D;&#x4F1A;&#x76F8;&#x540C;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BB2;&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x90FD;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#xFF0C;&#x54C8;&#x5E0C;&#x503C;&#x5C31;&#x662F;&#x5B83;&#x4EEC;<code>id()</code>&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6240;&#x4EE5;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5728;&#x6BD4;&#x8F83;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E0D;&#x60F3;&#x7B49;&#x7684;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9E;&#x73B0;&#x4E86;<code>__eq__</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x7528;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x6709;&#x5F53;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x624D;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#x3002;</p>
+<p>Note: &#x5927;&#x591A;&#x6570;python&#x5185;&#x7F6E;&#x7684;&#x4E0D;&#x53EF;&#x53D8;&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;;&#x53EF;&#x53D8;&#x5BB9;&#x5668;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x5217;&#x8868;&#x548C;&#x5B57;&#x5178;&#x3002;&#x4E0D;&#x53EF;&#x53D8;&#x5BB9;&#x5668;&#x4EC5;&#x5F53;&#x5B83;&#x4EEC;&#x7684;&#x5143;&#x7D20;&#x5747;&#x4E3A;&#x53EF;&#x54C8;&#x5E0C;&#x65F6;&#x624D;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x5143;&#x7EC4;&#x548C;frozenset&#x3002;</p>
+<h5 id="&#x5B57;&#x5178;&#x63A8;&#x5BFC;">&#x5B57;&#x5178;&#x63A8;&#x5BFC;</h5>
+<p>&#x4EC0;&#x4E48;&#x662F;&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#xFF1F;&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5C31;&#x662F;&#x53EF;&#x4EE5;&#x4ECE;&#x4EFB;&#x4F55;&#x4EE5;&#x952E;&#x503C;&#x5BF9;&#x4F5C;&#x4E3A;&#x5143;&#x7D20;&#x7684;&#x53EF;&#x8FED;&#x4EE3;&#x5BF9;&#x8C61;&#x4E2D;&#x6784;&#x5EFA;&#x51FA;&#x5B57;&#x5178;&#x7684;&#x4E00;&#x79CD;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#x3002;</p>
+<pre><code class="lang-python">country_codes = [
+    (<span class="hljs-number">86</span>, <span class="hljs-string">&quot;China&quot;</span>),
+    (<span class="hljs-number">91</span>, <span class="hljs-string">&quot;India&quot;</span>),
+    ...
+]
+
+country_codes_dict = {country: code <span class="hljs-keyword">for</span> country, code <span class="hljs-keyword">in</span> country_codes}
+
+print(country_codes_dict)
+</code></pre>
+<h5 id="&#x5E38;&#x89C1;&#x6620;&#x5C04;&#x65B9;&#x6CD5;&#x5B57;&#x5178;">&#x5E38;&#x89C1;&#x6620;&#x5C04;&#x65B9;&#x6CD5;(&#x5B57;&#x5178;)</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x65B9;&#x6CD5;</th>
+<th style="text-align:center">dict</th>
+<th style="text-align:center">defaultdict</th>
+<th style="text-align:center">OrderedDict</th>
+<th style="text-align:center">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">d.clear()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x79FB;&#x9664;&#x6240;&#x6709;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__contains__(k)</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x68C0;&#x67E5;k&#x662F;&#x5426;&#x5B58;&#x5728;d&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:center">d.copy()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x6D45;&#x590D;&#x5236;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__copy__()</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x7528;&#x4E8E;&#x652F;&#x6301;copy.copy</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.default_factory</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5728;<code>__missing__</code>&#x51FD;&#x6570;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4EE5;&#x7ED9;&#x672A;&#x627E;&#x5230;&#x7684;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__delitem__(k)</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">del d[k],&#x79FB;&#x9664;&#x952E;&#x4E3A;k&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.formkeys(it, [initial])</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x5C06;&#x8FED;&#x4EE3;&#x5668;it&#x91CC;&#x7684;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x4E3A;&#x6620;&#x5C04;&#x91CC;&#x7684;&#x952E;&#xFF0C;&#x5982;&#x679C;&#x6709;initial&#x53C2;&#x6570;&#x5C31;&#x628A;&#x5B83;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E9B;&#x5C06;&#x5BF9;&#x5E94;&#x7684;&#x503C;(&#x9ED8;&#x8BA4;&#x4E3A;None)</td>
+</tr>
+<tr>
+<td style="text-align:center">d.get(k, [default])</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x952E;k&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x5B57;&#x5178;&#x91CC;&#x6CA1;&#x6709;&#x952E;k&#xFF0C;&#x5219;&#x8FD4;&#x56DE;None&#x6216;&#x8FD9;default</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__getiem__(k)</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8BA9;&#x5B57;&#x5178;d&#x80FD;&#x7528;d[k]&#x7684;&#x65B9;&#x5F0F;&#x8FD4;&#x56DE;&#x952E;k&#x5BF9;&#x5E94;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:center">d.items()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x5B57;&#x5178;d&#x6240;&#x6709;&#x7684;&#x952E;&#x503C;&#x5BF9;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__iter__()</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x83B7;&#x53D6;&#x952E;&#x7684;&#x8FED;&#x4EE3;&#x5668;</td>
+</tr>
+<tr>
+<td style="text-align:center">d.keys()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x83B7;&#x53D6;d&#x7684;&#x6240;&#x6709;&#x952E;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__len__()</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x91CC;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__mission__(k)</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5F53;<code>__getitem__</code>&#x627E;&#x4E0D;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</td>
+</tr>
+<tr>
+<td style="text-align:center">d.move_to_end(k, [last])</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x628A;&#x952E;&#x4E3A;k&#x7684;&#x5143;&#x7D20;&#x79FB;&#x52A8;&#x5230;&#x6700;&#x9760;&#x524D;&#x6216;&#x6700;&#x9760;&#x540E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;last&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x662F;True</td>
+</tr>
+<tr>
+<td style="text-align:center">d.pop(k, default)</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x952E;k&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x79FB;&#x9664;&#x8FD9;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x952E;&#xFF0C;&#x8FD4;&#x56DE;None&#x6216;default</td>
+</tr>
+<tr>
+<td style="text-align:center">d.popitem()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x968F;&#x673A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#x5E76;&#x4ECE;&#x5B57;&#x5178;&#x91CC;&#x79FB;&#x9664;&#x5B83;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__reversed__()</code></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x5012;&#x5E8F;&#x7684;&#x952E;&#x7684;&#x8FED;&#x4EE3;&#x5668;</td>
+</tr>
+<tr>
+<td style="text-align:center">d.setdefault(k, [default])</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x82E5;&#x5B57;&#x5178;&#x91CC;&#x6709;&#x952E;k&#xFF0C;&#x5219;&#x628A;&#x5B83;&#x5BF9;&#x5E94;&#x7684;&#x503C; &#x8BBE;&#x7F6E;&#x4E3A; default&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A; &#x503C;&#xFF1B;&#x82E5;&#x65E0;&#xFF0C;&#x5219;&#x8BA9; d[k] = default&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE; default</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>d.__setitem__(k, v)</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x5B9E;&#x73B0; d[k] = v &#x64CD;&#x4F5C;&#xFF0C;&#x628A; k &#x5BF9;&#x5E94;&#x7684; &#x503C;&#x8BBE;&#x4E3A;v</td>
+</tr>
+<tr>
+<td style="text-align:center">d.update(m, [**kargs])</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">m &#x53EF;&#x4EE5;&#x662F;&#x6620;&#x5C04;&#x6216;&#x8005;&#x952E;&#x503C;&#x5BF9;&#x8FED;&#x4EE3; &#x5668;&#xFF0C;&#x7528;&#x6765;&#x66F4;&#x65B0; d &#x91CC;&#x5BF9;&#x5E94;&#x7684;&#x6761;&#x76EE;</td>
+</tr>
+<tr>
+<td style="text-align:center">d.values()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x91CC;&#x7684;&#x6240;&#x6709;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="&#x96C6;&#x5408;">&#x96C6;&#x5408;</h5>
+<p>&#x96C6;&#x5408;&#x662F;python&#x5185;&#x7F6E;&#x7684;&#x4E00;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x8BB8;&#x591A;&#x552F;&#x4E00;&#x5BF9;&#x8C61;&#x7684;&#x805A;&#x96C6;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x96C6;&#x5408;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x53BB;&#x91CD;&#x3002;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x662F;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#xFF0C;set&#x7C7B;&#x578B;&#x672C;&#x8EAB;&#x662F;&#x4E0D;&#x53EF;&#x54C8;&#x5E0C;&#x7684;&#x3002;</p>
+<p>Note: &#x5982;&#x679C;&#x60F3;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x96C6;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;set()&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;{}&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#xFF0C;{}&#x5B9E;&#x8D28;&#x4E0A;&#x662F;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;&#x5B57;&#x5178;&#x3002;</p>
+<p>&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x5FEB;&#x901F;&#x751F;&#x6210;&#x96C6;&#x5408;&#x7684;&#x4E00;&#x79CD;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#xFF0C;&#x8BED;&#x6CD5;&#x8DDF;&#x5217;&#x8868;&#x548C;&#x751F;&#x6210;&#x5668;&#x8868;&#x8FBE;&#x5F0F;&#x7C7B;&#x4F3C;</p>
+<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> unicodedata <span class="hljs-keyword">import</span> name
+<span class="hljs-meta">&gt;&gt;&gt; </span>{chr(i) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">32</span>, <span class="hljs-number">256</span>) <span class="hljs-keyword">if</span> <span class="hljs-string">&apos;SIGN&apos;</span> <span class="hljs-keyword">in</span> name(chr(i), <span class="hljs-string">&apos;&apos;</span>)}
+{<span class="hljs-string">&apos;&#xA3;&apos;</span>, <span class="hljs-string">&apos;&#xB0;&apos;</span>, <span class="hljs-string">&apos;$&apos;</span>, <span class="hljs-string">&apos;&lt;&apos;</span>, <span class="hljs-string">&apos;&#xB5;&apos;</span>, <span class="hljs-string">&apos;&#xB1;&apos;</span>, <span class="hljs-string">&apos;&gt;&apos;</span>, <span class="hljs-string">&apos;&#xA2;&apos;</span>, <span class="hljs-string">&apos;&#xB6;&apos;</span>, <span class="hljs-string">&apos;#&apos;</span>, <span class="hljs-string">&apos;%&apos;</span>, <span class="hljs-string">&apos;&#xAE;&apos;</span>, <span class="hljs-string">&apos;&#xA4;&apos;</span>, <span class="hljs-string">&apos;&#xD7;&apos;</span>, <span class="hljs-string">&apos;&#xAC;&apos;</span>, <span class="hljs-string">&apos;&#xA9;&apos;</span>, <span class="hljs-string">&apos;&#xA7;&apos;</span>, <span class="hljs-string">&apos;=&apos;</span>, <span class="hljs-string">&apos;&#xF7;&apos;</span>, <span class="hljs-string">&apos;+&apos;</span>, <span class="hljs-string">&apos;&#xA5;&apos;</span>}
+&gt;&gt;&gt;
+</code></pre>
+<p>&#x7F16;&#x7A0B;&#x4E2D;&#x96C6;&#x5408;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x6CD5;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x65B9;&#x6CD5;</th>
+<th style="text-align:center">set</th>
+<th style="text-align:center">frozenset</th>
+<th style="text-align:center">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">s.add(e)</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x628A;&#x5143;&#x7D20;e&#x6DFB;&#x52A0;&#x5230;s&#x4E2D;</td>
+</tr>
+<tr>
+<td style="text-align:center">s.clear()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x79FB;&#x9664;s&#x4E2D;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td style="text-align:center">s.copy()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x5BF9;s&#x6D45;&#x590D;&#x5236;</td>
+</tr>
+<tr>
+<td style="text-align:center">s.discard(e)</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x5982;&#x679C;s&#x91CC;&#x6709;e&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x628A;ta&#x79FB;&#x9664;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>s.__iter__()</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;s&#x7684;&#x8FED;&#x4EE3;&#x5668;</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>s.__len__()</code></td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center">len(s)</td>
+</tr>
+<tr>
+<td style="text-align:center">s.pop()</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x4ECE;s&#x4E2D;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x5E76;&#x8FD4;&#x56DE;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x82E5;s&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x629B;&#x51FA;KeyError</td>
+</tr>
+<tr>
+<td style="text-align:center">s.remove(e)</td>
+<td style="text-align:center">yes</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">&#x4ECE;s&#x4E2D;&#x79FB;&#x9664;e&#x5143;&#x7D20;&#xFF0C;&#x82E5;e&#x5143;&#x7D20;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x629B;&#x51FA;KeyError</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -2319,7 +2578,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字典和集合","level":"1.6.5","depth":2,"next":{"title":"字符串","level":"1.6.6","depth":2,"path":"Python/字符串/string.md","ref":"Python/字符串/string.md","articles":[]},"previous":{"title":"可变与不可变对象","level":"1.6.4","depth":2,"path":"Python/可变与不可变对象/mut_and_unmut.md","ref":"Python/可变与不可变对象/mut_and_unmut.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Python/字典和集合/dct_and_set.md","mtime":"2021-09-21T17:10:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-21T14:14:30.333Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字典和集合","level":"1.6.5","depth":2,"next":{"title":"字符串","level":"1.6.6","depth":2,"path":"Python/字符串/string.md","ref":"Python/字符串/string.md","articles":[]},"previous":{"title":"可变与不可变对象","level":"1.6.4","depth":2,"path":"Python/可变与不可变对象/mut_and_unmut.md","ref":"Python/可变与不可变对象/mut_and_unmut.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Python/字典和集合/dict_and_set.md","mtime":"2022-04-09T11:33:05.014Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-11T13:29:43.682Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
