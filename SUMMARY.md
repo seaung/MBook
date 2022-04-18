@@ -57,6 +57,9 @@
   
 * [Python](Python/README.md)
   
+  * Pip python包管理工具
+    * [Pip简单使用](Python/Pip/README.md)
+  
   * [函数](Python/函数/function.md)
   * [闭包](Python/函数/闭包.md)
   * [列表和元组](Python/列表和元组/list_tuple.md)
