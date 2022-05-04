@@ -169,6 +169,10 @@
     
   * [DNS相关的一些小知识](技术杂项/什么鬼都有/dns-zs.md)
     
+  * [Centos7.8升级GCC](技术杂项/Linux/gcc.md)
+    
+  * [源码安装Mosquitto](技术杂项/什么鬼都有/mosquitto.md)
+    
   * [端口转发](portforward/README.md)
   
   * [Yaml](技术杂项/Yaml/README.md)
