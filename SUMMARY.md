@@ -71,6 +71,7 @@
     * [Apscheduler](Python/Python常用库/apscheduler.md)
     * [Celery](Python/Python常用库/celery.md)
     * [Flask-SQLAlchemy](Python/Python常用库/flask-sqlalchemy.md)
+    * [pymysql](Python/Python常用库/pymysql.md)
   * Django框架
     * [安装Django](Python/Django/install.md)
     * [django-admin工具](Python/Django/django-admin.md)
