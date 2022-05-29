@@ -24,22 +24,24 @@
 * [Golang](Golang/README.md)
 
   * Golang基础
-    * [New和Make]()
-  
-  * [Golang常用包](Golang/Golang基础/new-make.md)
+    * [New和Make](Golang/Golang基础/new-make.md)
+    * [内存逃逸学习](Golang/Golang基础/内存逃逸.md))
+    
+  * Golang常用包
     * [Gopacket包](Golang/Golang-package/gopacket.md)
     * [Rod-go包](Golang/Golang-package/rod-go/getstart.md)
-  * [Golang框架]()
+  * Golang框架
     * [Gin框架](Golang/Golang框架/Gin/README.md)
     
       * [Gin框架安装](Golang/Golang框架/Gin/install.md)
     
       * [Gin json](Golang/Golang框架/Gin/asciijson.md)
-    * [Gorm v1框架](Golang/Golang框架/Gormv1/README.md)
+    * Gorm v1框架
       * [Gorm连接数据库](Golang/Golang框架/Gormv1/gorm-connect.md)
       * [Gorm模型](Golang/Golang框架/Gormv1/gorm-models.md)
       * [Gorm字段定义](Golang/Golang框架/Gormv1/gorm-delcs.md)
       * [Gorm CRUD](Golang/Golang框架/Gormv1/gorm-crud.md)
+    * Gormv2
   * Golang并发编程
     * [一些并发概念](Golang/Golang并发编程/一些并发的概念.md)
     * [Goroutine](Golang/Golang并发编程/goroutine.md)
