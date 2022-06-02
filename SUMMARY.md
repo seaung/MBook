@@ -2,7 +2,7 @@
 
 * [简介](README.md)
 
-* [C语言](C/README.md)
+* C语言
 
   * [指针](C/pointer.md)
   * [指针和函数](C/function_and_pointer.md)
@@ -13,7 +13,7 @@
   * [C++类](C++/class.md)
   * [C++继承](C++/inherit.md)
   
-* [Docker](Docker/README.md)
+* Docker
   * [Docker简介](Docker/Docker简介/简介.md)
   * [Docker的安装](Docker/Docker简介/install.md)
   * [Docker基本概念](Docker/Docker基本概念/README.md)
@@ -57,7 +57,7 @@
   * Golang Runtime
     * [Runtime小总结](Golang/Go-Runtime/Golang-runtime-1.md)
   
-* [Python](Python/README.md)
+* Python
   
   * Pip python包管理工具
     * [Pip简单使用](Python/Pip/README.md)
@@ -80,7 +80,7 @@
     * [模型](Python/Django/models.md)
     * [视图](Python/Django/views.md)
   
-* [Rust](Rust/README.md)
+* Rust
   * [Rust简介和安装](Rust/Rust简介和安装/install.md)
   * [Rust基本数据类型](Rust/数据类型/data_type.md)
   * [Rust复合数据类型](Rust/数据类型/复合数据类型.md)
@@ -113,7 +113,7 @@
 
   * [Openresty安装](openresty/env.md)
   
-* [Security](Security/README.md)
+* Security
   * [渗透测试理论](Security/信息收集/README.md)
   * [信息收集](Security/信息收集/information.md)
   * [fofa空间搜索引擎](Security/信息收集/空间搜索引擎佛法.md)
@@ -126,7 +126,7 @@
   
 * [CRLF漏洞](Security/CRLF/README.md)
 
-* [SQL注入](Security/SQL注入/README.md)
+* SQL注入
   * [一些Mysql数据库相关知识](Security/SQL注入/MySQL数据库相关的东西.md)
     * [Mysql联合注入](Security/SQL注入/sqli-union.md)
     
@@ -164,11 +164,13 @@
   * React
     * [JSX基本使用](前端/React/jsx.md)
   
-* [技术杂项](技术杂项/README.md)
+* 技术杂项
   * [Linux](技术杂项/Linux/README.md)
     * [mysql首次登录设置密码](技术杂项/Linux/mysql首次登录密码设置.md)
     
     * [Ubuntu18.04配置静态IP](技术杂项/Linux/ubuntu-配置静态ip.md)
+    
+    * [expect介绍](技术杂项/Linux/expect.md)
     
   * [DNS相关的一些小知识](技术杂项/什么鬼都有/dns-zs.md)
     
