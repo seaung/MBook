@@ -173,6 +173,8 @@
     
     * [expect介绍](技术杂项/Linux/expect.md)
     
+    * [shell脚本简单总结](技术杂项/Linux/shell.md)
+    
   * [DNS相关的一些小知识](技术杂项/什么鬼都有/dns-zs.md)
     
   * [Centos7.8升级GCC](技术杂项/Linux/gcc.md)
