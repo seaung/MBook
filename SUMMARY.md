@@ -27,6 +27,7 @@
     * [New和Make](Golang/Golang基础/new-make.md)
     * [内存逃逸学习](Golang/Golang基础/内存逃逸.md)
     * [数组和Slice简单介绍](Golang/Golang基础/arrary-slice.md)
+    * [map基础](Golang/Golang基础/map.md)
     
   * Golang常用包
     * [Gopacket包](Golang/Golang-package/gopacket.md)
