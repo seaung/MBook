@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>一些并发概念 · GitBook</title>
+        <title>Runtime小总结2 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="goroutine.html" />
+    <link rel="next" href="../../Python/函数/function.html" />
     
+    
+    <link rel="prev" href="Golang-runtime-1.html" />
     
 
     </head>
@@ -600,9 +602,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.4.1" data-path="一些并发的概念.html">
+        <li class="chapter " data-level="1.5.4.1" data-path="../Golang并发编程/一些并发的概念.html">
             
-                <a href="一些并发的概念.html">
+                <a href="../Golang并发编程/一些并发的概念.html">
             
                     
                     一些并发概念
@@ -613,9 +615,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.2" data-path="goroutine.html">
+        <li class="chapter " data-level="1.5.4.2" data-path="../Golang并发编程/goroutine.html">
             
-                <a href="goroutine.html">
+                <a href="../Golang并发编程/goroutine.html">
             
                     
                     Goroutine
@@ -626,9 +628,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.3" data-path="channel.html">
+        <li class="chapter " data-level="1.5.4.3" data-path="../Golang并发编程/channel.html">
             
-                <a href="channel.html">
+                <a href="../Golang并发编程/channel.html">
             
                     
                     Golang channel
@@ -639,9 +641,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.4" data-path="context.html">
+        <li class="chapter " data-level="1.5.4.4" data-path="../Golang并发编程/context.html">
             
-                <a href="context.html">
+                <a href="../Golang并发编程/context.html">
             
                     
                     Golang Context
@@ -652,9 +654,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.5" data-path="sync.html">
+        <li class="chapter " data-level="1.5.4.5" data-path="../Golang并发编程/sync.html">
             
-                <a href="sync.html">
+                <a href="../Golang并发编程/sync.html">
             
                     
                     Golang Waitgroup
@@ -755,9 +757,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.6.1" data-path="../Go-Runtime/Golang-runtime-1.html">
+        <li class="chapter " data-level="1.5.6.1" data-path="Golang-runtime-1.html">
             
-                <a href="../Go-Runtime/Golang-runtime-1.html">
+                <a href="Golang-runtime-1.html">
             
                     
                     Runtime小总结
@@ -768,9 +770,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6.2" data-path="../Go-Runtime/Golang-runtime-2.html">
+        <li class="chapter active" data-level="1.5.6.2" data-path="Golang-runtime-2.html">
             
-                <a href="../Go-Runtime/Golang-runtime-2.html">
+                <a href="Golang-runtime-2.html">
             
                     
                     Runtime小总结2
@@ -2434,7 +2436,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >一些并发概念</a>
+        <a href="../.." >Runtime小总结2</a>
     </h1>
 </div>
 
@@ -2449,26 +2451,62 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h5 id="&#x4E00;&#x4E9B;&#x6982;&#x5FF5;">&#x4E00;&#x4E9B;&#x6982;&#x5FF5;</h5>
-<ol>
-<li><p>&#x539F;&#x5B50;&#x6027;:</p>
-<p>&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x90E8;&#x6267;&#x884C;&#x4E14;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x88AB;&#x4EFB;&#x4F55;&#x5916;&#x754C;&#x56E0;&#x7D20;&#x6253;&#x65AD;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x90E8;&#x4E0D;&#x6267;&#x884C;&#x3002;&#x4EC0;&#x4E48;&#x610F;&#x601D;?&#x62FF;&#x94F6;&#x884C;&#x8F6C;&#x5E10;&#x4F8B;&#x5B50;&#x6765;&#x8BB2;&#xFF0C;&#x7528;&#x6237;A&#x5411;&#x7528;&#x6237;B&#x8F6C;&#x5E10;1000&#xFF0C;&#x8FC7;&#x7A0B;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x7528;&#x6237;A&#x7684;&#x5E10;&#x53F7;&#x51CF;&#x53BB;1000,&#x7528;&#x6237;B&#x7684;&#x5E10;&#x53F7;&#x589E;&#x52A0;1000&#xFF0C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x88AB;&#x5916;&#x754C;&#x56E0;&#x7D20;&#x6253;&#x65AD;&#x3002;</p>
-</li>
-<li><p>&#x53EF;&#x89C1;&#x6027;:</p>
-<p>&#x5F53;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4FEE;&#x6539;&#x4E86;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x80FD;&#x591F;&#x611F;&#x77E5;&#x5230;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x53D1;&#x751F;&#x4E86;&#x4FEE;&#x6539;&#x3002;</p>
-</li>
-<li><p>&#x4E0A;&#x4E0B;&#x6587;&#x73AF;&#x5883;:</p>
-<p>&#x4E0A;&#x4E0B;&#x6587;&#x73AF;&#x5883;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x6BD4;&#x8F83;&#x6CDB;&#x5316;&#x548C;&#x62BD;&#x8C61;&#xFF0C;&#x5927;&#x6982;&#x662F;&#x6307;&#x67D0;&#x4E2A;&#x5BF9;&#x8C61;&#x6240;&#x5904;&#x7684;&#x4EE3;&#x7801;&#x6BB5;&#x7684;&#x4F4D;&#x7F6E;&#x6216;&#x8005;&#x73AF;&#x5883;&#x3002;</p>
-</li>
-<li><p>&#x5E76;&#x53D1;:</p>
-<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x7A0B;&#x5E8F;&#x5728;&#x5355;&#x4F4D;&#x65F6;&#x95F4;&#x5185;&#x662F;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x7684;&#x3002;</p>
-</li>
-<li><p>&#x5E76;&#x884C;:</p>
-<p>&#x7A0B;&#x5E8F;&#x5728;&#x4EFB;&#x610F;&#x65F6;&#x523B;&#x90FD;&#x662F;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6267;&#x884C;&#x5355;&#x5143;&#x3002;</p>
-</li>
-</ol>
-<h5 id="go&#x5185;&#x5B58;&#x6A21;&#x578B;">Go&#x5185;&#x5B58;&#x6A21;&#x578B;</h5>
-<h5 id="&#x5148;&#x884C;&#x53D1;&#x751F;happen-before">&#x5148;&#x884C;&#x53D1;&#x751F;(Happen-Before)</h5>
+                                <h5 id="&#x4ECE;&#x4E00;&#x4E2A;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5F00;&#x59CB;&#x5230;gm&#x6A21;&#x578B;">&#x4ECE;&#x4E00;&#x4E2A;&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x5F00;&#x59CB;&#x5230;GM&#x6A21;&#x578B;</h5>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> main() {
+    fmt.Println(<span class="hljs-string">&quot;hi&quot;</span>)
+}
+</code></pre>
+<p>&#x4E00;&#x4E2A;go&#x6E90;&#x7801;&#x6587;&#x4EF6;&#x88AB;&#x7F16;&#x8BD1;&#x6210;&#x4E00;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x6267;&#x884C;&#x65F6;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5BF9;&#x4E8E;&#x8FDB;&#x7A0B;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x7684;&#x4EE3;&#x7801;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x662F;&#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#xFF0C;ta&#x5E76;&#x4E0D;&#x662F;&#x6211;&#x4EEC;&#x719F;&#x6089;&#x7684;main.main&#x3002;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x4E0B;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5165;&#x53E3;&#x4E0D;&#x540C;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x68C0;&#x67E5;&#x4E0E;&#x521D;&#x59CB;&#x5316;&#x7B49;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x540E;&#xFF0C;&#x4F1A;&#x4EE5;runtime.main&#x4E3A;&#x6267;&#x884C;&#x5165;&#x53E3;&#x521B;&#x5EFA;main goroutine&#x3002;runtime.goroutine&#x6267;&#x884C;&#x8D77;&#x6765;&#x540E;&#x624D;&#x4F1A;&#x8C03;&#x7528;&#x6211;&#x4EEC;&#x7F16;&#x5199;&#x7684;main.main&#x3002;&#x518D;&#x6765;&#x770B;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6BB5;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x51E0;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0D;&#x5F97;&#x4E0D;&#x63D0;&#x53CA;&#xFF0C;&#x6211;&#x4EEC;&#x77E5;&#x9053;Go&#x4E2D;&#x7684;&#x534F;&#x7A0B;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;runtime.g&#x548C;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;runtime.m&#x3002;&#x800C;&#x5168;&#x5C40;&#x53D8;&#x91CF;g0&#x5C31;&#x662F;&#x4E3B;&#x534F;&#x7A0B;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;g&#xFF0C;&#x4E0E;&#x5176;&#x4ED6;&#x534F;&#x7A0B;&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x7684;&#x534F;&#x7A0B;&#x6808;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x5206;&#x914D;&#x7684;&#x3002;&#x5168;&#x5C40;&#x53D8;&#x91CF;m0&#x5C31;&#x662F;&#x4E3B;&#x534F;&#x7A0B;&#x5BF9;&#x5E94;&#x7684;m&#x3002;g0&#x6301;&#x6709;m0&#x7684;&#x6307;&#x9488;&#xFF0C;m0&#x4E5F;&#x6301;&#x6709;g0&#x6307;&#x9488;&#xFF0C;&#x800C;&#x4E14;&#x4E00;&#x5F00;&#x59CB;m0&#x4E0A;&#x6267;&#x884C;&#x7684;&#x534F;&#x7A0B;&#x6B63;&#x662F;g0&#x3002; m0&#x548C;g0&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x8054;&#x7CFB;&#x4E86;&#x8D77;&#x6765;&#x3002;&#x5168;&#x5C40;&#x53D8;&#x91CF;alls&#x8BB0;&#x5F55;&#x7740;&#x6240;&#x6709;&#x7684;g,allm&#x8BB0;&#x5F55;&#x7740;&#x6240;&#x6709;&#x7684;m&#x3002;</p>
+<p><img src="../images/r0.png" alt="runtime 0"></p>
+<p>Go&#x6700;&#x521D;&#x7684;&#x8C03;&#x5EA6;&#x6A21;&#x578B;&#x53EA;&#x6709;M&#x548C;G,&#x6240;&#x4EE5;&#x5F85;&#x6267;&#x884C;&#x7684;G,&#x5728;&#x5168;&#x5C40;&#x961F;&#x5217;&#x4E2D;&#x7B49;&#x5F85;&#x88AB;&#x8FD0;&#x884C;&#x3002;&#x6BCF;&#x4E2A;M&#x6765;&#x8FD9;&#x91CC;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;G&#x65F6;&#x90FD;&#x8981;&#x8FDB;&#x884C;&#x52A0;&#x9501;&#x64CD;&#x4F5C;&#xFF0C;&#x591A;&#x4E2A;M&#x5206;&#x62C5;&#x591A;&#x4E2A;G&#x7684;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x5C31;&#x4F1A;&#x56E0;&#x9891;&#x7E41;&#x7684;&#x52A0;&#x9501;&#x89E3;&#x9501;&#x64CD;&#x4F5C;&#x800C;&#x53D1;&#x751F;&#x7B49;&#x5F85;&#x5F71;&#x54CD;&#x5E76;&#x53D1;&#x6027;&#x80FD;&#x3002;</p>
+<p><img src="../images/r1.png" alt="runtime2"></p>
+<h5 id="&#x4ECE;gm&#x5230;gmp">&#x4ECE;GM&#x5230;GMP</h5>
+<p>Go&#x5B98;&#x65B9;&#x5728;GM&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x52A0;&#x5165;&#x4E86;P&#xFF0C;P&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;runtime.p,&#x4ED6;&#x6709;&#x4E2A;&#x672C;&#x5730;runq,&#x8FD9;&#x6837;&#x53EA;&#x6709;&#x5C06;&#x4E00;&#x4E2A;P&#x5173;&#x8054;&#x5230;&#x4E00;&#x4E2A;M,&#x8FD9;&#x4E2A;M&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;P&#x8FD9;&#x91CC;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x5F85;&#x6267;&#x884C;&#x7684;G,&#x4E0D;&#x7528;&#x6BCF;&#x6B21;&#x90FD;&#x548C;&#x4F17;&#x591A;&#x7684;M&#x4ECE;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x961F;&#x5217;&#x4E2D;&#x4E89;&#x62A2;&#x4EFB;&#x52A1;&#x4E86;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x867D;&#x7136;P&#x6709;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x961F;&#x5217;runq,&#x4F46;&#x662F;&#x4F9D;&#x7136;&#x6709;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x961F;&#x5217;runq,&#x5B83;&#x4FDD;&#x5B58;&#x5728;&#x5168;&#x5C40;&#x53D8;&#x91CF;sched&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x8C03;&#x5EA6;&#x5668;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x662F;runtime.schedt,&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x7740;&#x6240;&#x6709;&#x7A7A;&#x95F2;&#x7684;m,&#x7A7A;&#x95F2;&#x7684;p&#x7B49;&#x7B49;&#xFF0C;&#x8BB8;&#x591A;&#x8C03;&#x5EA6;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5176;&#x4E2D;&#x5C31;&#x6709;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7684;runq.&#x5982;&#x679C;&#x672C;&#x5730;&#x961F;&#x5217;&#x5DF2;&#x6EE1;&#xFF0C;&#x90A3;&#x4E48;&#x7B49;&#x5F85;&#x6267;&#x884C;&#x7684;G&#x5C31;&#x4F1A;&#x88AB;&#x653E;&#x5230;&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x961F;&#x5217;&#x91CC;&#x3002;&#x800C;p&#x4F1A;&#x5148;&#x4ECE;&#x5173;&#x8054;p&#x6301;&#x6709;&#x7684;&#x672C;&#x5730;runq&#x4E2D;&#x83B7;&#x53D6;&#x5F85;&#x6267;&#x884C;&#x7684;G,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#xFF0C;&#x5728;&#x5230;&#x8C03;&#x5EA6;&#x5668;&#x6301;&#x6709;&#x7684;&#x5168;&#x5C40;runq&#x9886;&#x53D6;&#x4E00;&#x4E9B;&#x4EFB;&#x52A1;&#x3002;&#x5982;&#x679C;&#x5168;&#x5C40;runq&#x4E2D;&#x4E5F;&#x6CA1;&#x6709;&#x4E86;&#xFF0C;&#x5C31;&#x4F1A;&#x53BB;&#x522B;&#x7684;P&#x90A3;&#x91CC;&quot;&#x5206;&#x62C5;&quot;&#x4E00;&#x4E9B;G&#x8FC7;&#x6765;&#x6267;&#x884C;&#x3002;&#x540C;G&#x548C;M&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x6240;&#x6709;P&#x7684;&#x5168;&#x5C40;&#x53D8;&#x91CF;allp&#x3002;&#x5728;&#x7A0B;&#x5E8F;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x8FDB;&#x884C;&#x8C03;&#x5EA6;&#x5668;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x8FD9;&#x65F6;&#x4F1A;&#x6309;&#x7167;GOMAXPROCS&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x51B3;&#x5B9A;&#x521B;&#x5EFA;&#x591A;&#x5C11;&#x4E2A;P,&#x4FDD;&#x5B58;&#x5728;allp&#x8FD9;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x5305;&#x7B2C;&#x4E00;&#x4E2A;allp[0]&#x4E0E;m0&#x5173;&#x8054;&#x8D77;&#x6765;&#x3002;&#x6240;&#x4EE5;G,M&#x548C;P&#x5C31;&#x8FD9;&#x6837;&#x7684;&#x5408;&#x4F5C;&#x5173;&#x7CFB;&#x3002;</p>
+<p><img src="../images/r3.png" alt="r3"></p>
+<p><img src="../images/r2.png" alt="runtime 3"></p>
+<p>&#x5728;main.goroutine&#x521B;&#x5EFA;&#x524D;&#xFF0C;G,P,M&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;main.goroutine&#x88AB;&#x521B;&#x5EFA;&#x540E;&#x88AB;&#x52A0;&#x5165;&#x5230;&#x5F53;&#x524D;P&#x7684;&#x672C;&#x5730;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;mstart&#x51FD;&#x6570;&#x5F00;&#x542F;&#x8C03;&#x5EA6;&#x5FAA;&#x73AF;&#x3002;&#x8FD9;&#x4E2A;mstart&#x51FD;&#x6570;&#x662F;&#x6240;&#x6709;&#x5DE5;&#x4F5C;&#x7EBF;&#x7A0B;&#x7684;&#x5165;&#x53E3;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x8C03;&#x7528;schedule&#x51FD;&#x6570;&#xFF0C;&#x5373;&#x5F00;&#x542F;&#x8C03;&#x5EA6;&#x5FAA;&#x73AF;&#x3002;&#x5176;&#x5B9E;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x6D3B;&#x8DC3;&#x7684;M&#x800C;&#x8A00;&#xFF0C;&#x4E0D;&#x662F;&#x5728;&#x6267;&#x884C;&#x67D0;&#x4E2A;G,&#x5C31;&#x662F;&#x5728;&#x6267;&#x884C;&#x8C03;&#x5EA6;&#x7A0B;&#x5E8F;&#x83B7;&#x53D6;&#x67D0;&#x4E2A;G&#x3002;&#x961F;&#x5217;&#x91CC;&#x53EA;&#x6709;main.goroutine&#x7B49;&#x5F85;&#x6267;&#x884C;&#x6240;&#x4EE5;m0&#x5207;&#x6362;&#x5230;main.goroutine&#xFF0C;&#x6267;&#x884C;&#x5165;&#x53E3;&#x81EA;&#x7136;&#x662F;runtime.main&#x4ED6;&#x4F1A;&#x505A;&#x5F88;&#x591A;&#x4E8B;&#x60C5;&#xFF0C;&#x5305;&#x62EC;&#x521B;&#x5EFA;&#x76D1;&#x63A7;&#x7EBF;&#x7A0B;&#xFF0C;&#x8FDB;&#x884C;&#x5305;&#x521D;&#x59CB;&#x5316;&#x7B49;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x6211;&#x4EEC;&#x719F;&#x6089;&#x7684;main.main&#x3002;&#x5728;main.main&#x8FD4;&#x56DE;&#x540E;runtime.main&#x4F1A;&#x8C03;&#x7528;exit&#x51FD;&#x6570;&#x7ED3;&#x675F;&#x8FDB;&#x7A0B;&#x3002;</p>
+<p><img src="../images/r5.png" alt="r5"></p>
+<p><img src="../images/r4.png" alt="r4"></p>
+<h5 id="&#x4EE5;goroutine&#x7684;&#x65B9;&#x5F0F;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;">&#x4EE5;Goroutine&#x7684;&#x65B9;&#x5F0F;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;</h5>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">func</span> hi() {
+    fmt.Println(<span class="hljs-string">&quot;hi&quot;</span>)
+}
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">go</span> hi()
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5728;main.main&#x4E2D;&#x542F;&#x52A8;&#x4E00;&#x4E2A;goroutine,&#x90A3;&#x4E48;&#x4F1A;&#x5230;main.main&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;goroutine&#x3002;&#x5728;Golang&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;go&#x5173;&#x952E;&#x5B57;&#x521B;&#x5EFA;&#x534F;&#x7A0B;&#xFF0C;&#x4F1A;&#x88AB;&#x7F16;&#x8BD1;&#x5668;&#x8F6C;&#x6362;&#x4E3A;newproc&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;main.goroutine&#x4E5F;&#x5C31;&#x662F;&#x7528;newproc&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x521B;&#x5EFA;goroutine&#x65F6;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8D1F;&#x8D23;&#x6307;&#x5B9A;&#x5165;&#x53E3;&#xFF0C;&#x53C2;&#x6570;&#x3002;&#x800C;newproc&#x4F1A;&#x7ED9;goroutine&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x6808;&#x5E27;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x8BA9;&#x534F;&#x7A0B;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x8FD4;&#x56DE;&#x5230;goexit&#x51FD;&#x6570;&#x4E2D;&#x8FDB;&#x884C;&#x534F;&#x7A0B;&#x8D44;&#x6E90;&#x56DE;&#x6536;&#x5904;&#x7406;&#x7B49;&#x5DE5;&#x4F5C;&#x3002;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x662F;&#x8BE5;&#x653E;&#x5230;&#x7A7A;&#x95F2;G&#x961F;&#x5217;&#x91CC;&#x5907;&#x7528;&#xFF0C;&#x8FD8;&#x662F;&#x91CA;&#x653E;&#xFF0C;&#x603B;&#x5F52;&#x8981;&#x6709;&#x4E2A;&#x51FA;&#x8DEF;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;GOMAXPROCS&#x4E4B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;P,&#x65B0;&#x521B;&#x5EFA;&#x7684;goroutine&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D;P&#x7684;&#x672C;&#x5730;runq,&#x7136;&#x540E;main.main&#x5C31;&#x7ED3;&#x675F;&#x8FD4;&#x56DE;&#x4E86;&#xFF0C;&#x5728;&#x7136;&#x540E;exit&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x6CA1;&#x6709;&#x7136;&#x540E;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x65B0;&#x521B;&#x5EFA;&#x7684;goroutine&#x4ED6;&#x6CA1;&#x80FD;&#x6267;&#x884C;&#x3002;&#x95EE;&#x9898;&#x5C31;&#x5728;&#x4E8E;main.main&#x8FD4;&#x56DE;&#x540E;&#xFF0C;exit&#x51FD;&#x6570;&#x5C31;&#x88AB;&#x8C03;&#x7528;&#x76F4;&#x63A5;&#x5305;&#x8FDB;&#x7A0B;&#x7ED3;&#x675F;&#x6389;&#xFF0C;&#x6CA1;&#x7ED9;&#x65B0;&#x521B;&#x5EFA;&#x7684;goroutine&#x7A7A;&#x51FA;&#x8C03;&#x5EA6;&#x65F6;&#x95F4;&#x3002;&#x6240;&#x4EE5;&#x60F3;&#x8981;&#x8BA9;&#x65B0;&#x521B;&#x5EFA;&#x7684;goroutine&#x6267;&#x884C;&#x5C31;&#x9700;&#x8981;&#x5728;main.main&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#x62D6;&#x5EF6;&#x4E0B;&#x65F6;&#x95F4;&#x3002;&#x4F8B;&#x5982;&#x4F7F;&#x7528;time.Sleep(), &#x7A7A;select{}&#x7B49;&#x3002;</p>
+<p><img src="../images/r6.png" alt="r6"></p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;time&quot;</span>
+)
+
+<span class="hljs-keyword">func</span> hi() {
+    fmt.Println(<span class="hljs-string">&quot;hi&quot;</span>)
+}
+
+<span class="hljs-keyword">func</span> main() {
+    <span class="hljs-keyword">go</span> hi()
+
+    time.Sleep(time.Second * <span class="hljs-number">5</span>)
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;time.Sleep(),&#x5B9E;&#x9645;&#x4E0A;&#x4F1A;&#x8C03;&#x7528;gopark&#x51FD;&#x6570;&#xFF0C;&#x628A;&#x5F53;&#x524D;&#x534F;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x4ECE;<code>_Gruning</code>&#x4FEE;&#x6539;&#x4E3A;<code>_Gwaiting</code>,&#x7136;&#x540E;main.goroutine&#x4E0D;&#x4F1A;&#x56DE;&#x5230;&#x5F53;&#x524D;P&#x7684;runq&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x5728;timer&#x4E2D;&#x7B49;&#x5F85;&#x7EE7;&#x800C;&#x8C03;&#x7528;schedule&#x8FDB;&#x884C;&#x8C03;&#x7528;hi gooutine&#x5F97;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x7B49;sleep&#x65F6;&#x95F4;&#x5230;&#x8FBE;&#x540E;&#xFF0C;timer&#x4F1A;&#x5427;main.goroutine&#x91CD;&#x65B0;&#x7F6E;&#x4E3A;<code>_Grunable</code>&#x72B6;&#x6001;&#x653E;&#x56DE;&#x5230;P&#x7684;runq&#x4E2D;&#xFF0C;&#x518D;&#x7136;&#x540E;main.main&#x7ED3;&#x675F;&#xFF0C;exit&#x5F97;&#x4EE5;&#x8C03;&#x7528;&#x8FDB;&#x7A0B;&#x63A8;&#x51FA;&#xFF0C;&#x8FD9;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;P&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x521B;&#x5EFA;&#x4E86;&#x591A;&#x4E2A;P,hi goroutine&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#xFF0C;&#x867D;&#x7136;&#x9ED8;&#x8BA4;&#x4F1A;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D;P&#x7684;&#x672C;&#x5730;&#x961F;&#x5217;&#x91CC;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x6709;&#x7A7A;&#x95F2;P&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x65B0;&#x7684;&#x7EBF;&#x7A0B;&#x5173;&#x8054;&#x5230;&#x8FD9;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;P,&#x5E76;&#x628A;hi goroutine&#x653E;&#x5728;&#x5B83;&#x7684;&#x672C;&#x5730;&#x961F;&#x5217;&#x4E2D;&#x4E86;&#xFF0C;&#x540C;&#x6837;&#x7684;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;time.sleep&#x6216;&#x8005;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;channel&#x53C8;&#x6216;&#x8005;&#x4F7F;&#x7528;waitgroup,&#x53CD;&#x6B63;&#x6267;&#x884C;main.main&#x4E0D;&#x9A6C;&#x4E0A;&#x8FD4;&#x56DE;&#xFF0C;hi goroutine&#x5C31;i&#x6709;&#x65F6;&#x95F4;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x3002;</p>
+<hr>
+<p>that&apos;s all</p>
 
                                 
                                 </section>
@@ -2496,8 +2534,12 @@
 
             
                 
+                <a href="Golang-runtime-1.html" class="navigation navigation-prev " aria-label="Previous page: Runtime小总结">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="goroutine.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Goroutine">
+                
+                <a href="../../Python/函数/function.html" class="navigation navigation-next " aria-label="Next page: 函数">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2508,7 +2550,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一些并发概念","level":"1.5.4.1","depth":3,"next":{"title":"Goroutine","level":"1.5.4.2","depth":3,"path":"Golang/Golang并发编程/goroutine.md","ref":"Golang/Golang并发编程/goroutine.md","articles":[]},"previous":{"title":"Golang并发编程","level":"1.5.4","depth":2,"ref":"","articles":[{"title":"一些并发概念","level":"1.5.4.1","depth":3,"path":"Golang/Golang并发编程/一些并发的概念.md","ref":"Golang/Golang并发编程/一些并发的概念.md","articles":[]},{"title":"Goroutine","level":"1.5.4.2","depth":3,"path":"Golang/Golang并发编程/goroutine.md","ref":"Golang/Golang并发编程/goroutine.md","articles":[]},{"title":"Golang channel","level":"1.5.4.3","depth":3,"path":"Golang/Golang并发编程/channel.md","ref":"Golang/Golang并发编程/channel.md","articles":[]},{"title":"Golang Context","level":"1.5.4.4","depth":3,"path":"Golang/Golang并发编程/context.md","ref":"Golang/Golang并发编程/context.md","articles":[]},{"title":"Golang Waitgroup","level":"1.5.4.5","depth":3,"path":"Golang/Golang并发编程/sync.md","ref":"Golang/Golang并发编程/sync.md","articles":[]},{"title":"Mutext","level":"1.5.4.6","depth":3,"path":"Golang/mutext/mutext-demon.md","ref":"Golang/mutext/mutext-demon.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Golang/Golang并发编程/一些并发的概念.md","mtime":"2021-10-31T07:26:18.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-29T02:36:40.362Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Runtime小总结2","level":"1.5.6.2","depth":3,"next":{"title":"函数","level":"1.6","depth":1,"path":"Python/函数/function.md","ref":"Python/函数/function.md","articles":[{"title":"Pip python包管理工具","level":"1.6.1","depth":2,"ref":"","articles":[{"title":"Pip简单使用","level":"1.6.1.1","depth":3,"path":"Python/Pip/README.md","ref":"Python/Pip/README.md","articles":[]}]},{"title":"函数","level":"1.6.2","depth":2,"path":"Python/函数/function.md","ref":"Python/函数/function.md","articles":[]},{"title":"闭包","level":"1.6.3","depth":2,"path":"Python/函数/闭包.md","ref":"Python/函数/闭包.md","articles":[]},{"title":"列表和元组","level":"1.6.4","depth":2,"path":"Python/列表和元组/list_tuple.md","ref":"Python/列表和元组/list_tuple.md","articles":[]},{"title":"可变与不可变对象","level":"1.6.5","depth":2,"path":"Python/可变与不可变对象/mut_and_unmut.md","ref":"Python/可变与不可变对象/mut_and_unmut.md","articles":[]},{"title":"字典和集合","level":"1.6.6","depth":2,"path":"Python/字典和集合/dict_and_set.md","ref":"Python/字典和集合/dict_and_set.md","articles":[]},{"title":"字符串","level":"1.6.7","depth":2,"path":"Python/字符串/string.md","ref":"Python/字符串/string.md","articles":[]},{"title":"Python并发编程","level":"1.6.8","depth":2,"path":"Python/并发编程/python里的并发编程.md","ref":"Python/并发编程/python里的并发编程.md","articles":[]},{"title":"Python常用库","level":"1.6.9","depth":2,"path":"Python/Python常用库/README.md","ref":"Python/Python常用库/README.md","articles":[{"title":"Apscheduler","level":"1.6.9.1","depth":3,"path":"Python/Python常用库/apscheduler.md","ref":"Python/Python常用库/apscheduler.md","articles":[]},{"title":"Celery","level":"1.6.9.2","depth":3,"path":"Python/Python常用库/celery.md","ref":"Python/Python常用库/celery.md","articles":[]},{"title":"Flask-SQLAlchemy","level":"1.6.9.3","depth":3,"path":"Python/Python常用库/flask-sqlalchemy.md","ref":"Python/Python常用库/flask-sqlalchemy.md","articles":[]},{"title":"pymysql","level":"1.6.9.4","depth":3,"path":"Python/Python常用库/pymysql.md","ref":"Python/Python常用库/pymysql.md","articles":[]}]},{"title":"Django框架","level":"1.6.10","depth":2,"ref":"","articles":[{"title":"安装Django","level":"1.6.10.1","depth":3,"path":"Python/Django/install.md","ref":"Python/Django/install.md","articles":[]},{"title":"django-admin工具","level":"1.6.10.2","depth":3,"path":"Python/Django/django-admin.md","ref":"Python/Django/django-admin.md","articles":[]},{"title":"模型","level":"1.6.10.3","depth":3,"path":"Python/Django/models.md","ref":"Python/Django/models.md","articles":[]},{"title":"视图","level":"1.6.10.4","depth":3,"path":"Python/Django/views.md","ref":"Python/Django/views.md","articles":[]}]}]},"previous":{"title":"Runtime小总结","level":"1.5.6.1","depth":3,"path":"Golang/Go-Runtime/Golang-runtime-1.md","ref":"Golang/Go-Runtime/Golang-runtime-1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Golang/Go-Runtime/Golang-runtime-2.md","mtime":"2022-07-24T13:51:37.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-29T02:36:40.362Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
