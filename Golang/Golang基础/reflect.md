@@ -25,7 +25,7 @@ Note:
 
 reflect包另一重要的类型Value。`reflect.Value`可以包含一个任意类型的值。`reflect.ValueOf`函数接受任意的interface{}并将接口的动态值以`reflect.Value`的形式返回。与`reflect.TypeOf`类似，`reflect.ValueOf`的返回值也都是具体值，不同的是`refelct.Value`也可以包含一个接口值
 
-```
+```go
 v := reflect.ValueOf(2)
 println(v) // 2
 println(v.String()) // "<int Value>"
