@@ -29,6 +29,9 @@
     * [数组和Slice简单介绍](Golang/Golang基础/arrary-slice.md)
     * [map基础](Golang/Golang基础/map.md)
     * [函数](Golang/Golang基础/function.md)
+    * [方法1](Golang/Golang基础/methods.md)
+    * [Go接口1](Golang/Golang基础/interface.md)
+    * [Go反射编程1](Golang/Golang基础/reflect.md)
     
   * Golang常用包
     * [Gopacket包](Golang/Golang-package/gopacket.md)
@@ -114,7 +117,6 @@
   * [Lua面向对象](lua/OOP/README.md)
   
 * Openresty
-
   * [Openresty安装](openresty/env.md)
   
 * Security
