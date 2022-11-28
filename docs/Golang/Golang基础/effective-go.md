@@ -46,9 +46,30 @@ if a > b {
 
 ##### 控制结构
 
-1. if
+1. if控制语句
 
+```go
+if a > 0 {
+    return b
+}
+```
 
+2. for循环语句
+
+```go
+// c风格的for
+for	init; condition; post {
+    // statement
+}
+
+for condition {
+    // statement
+}
+
+for {
+    // statement
+}
+```
 
 
 

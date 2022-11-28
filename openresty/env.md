@@ -4,7 +4,7 @@
 
 ```bash
 sudo apt-get install libpcre3-dev \
-    libssl-dev perl make build-essential curl
+    libssl-dev perl make build-essential curl zlib1g zlib1g-dev
 ```
 
 2. 安装导入 GPG 公钥时所需的几个依赖包
