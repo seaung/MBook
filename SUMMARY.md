@@ -6,6 +6,8 @@
 
   * [指针](C/pointer.md)
   * [指针和函数](C/function_and_pointer.md)
+  * [文件通用操作方法1](C/文件通用操作方法.md)
+  * [进程相关1](C/C进程相关函数介绍.md)
   
 * C++
 
@@ -32,7 +34,10 @@
     * [方法1](Golang/Golang基础/methods.md)
     * [Go接口1](Golang/Golang基础/interface.md)
     * [Go反射编程1](Golang/Golang基础/reflect.md)
-    
+  * Golang常用标准库
+    * [http]()
+    * [json]()
+    * [文件操作相关]()
   * Golang常用包
     * [Gopacket包](Golang/Golang-package/gopacket.md)
     * [Rod-go包](Golang/Golang-package/rod-go/getstart.md)
@@ -59,7 +64,6 @@
     * [错误和异常](Golang/Golang错误处理/error_exception.md)
     * [pkg/errors包的使用](Golang/Golang错误处理/pkg_errors.md)
     * [错误处理编写套路](Golang/Golang错误处理/套路.md)
-  
   * Golang Runtime
     * [Runtime小总结](Golang/Go-Runtime/Golang-runtime-1.md)
     * [Runtime小总结2](Golang/Go-Runtime/Golang-runtime-2.md))
