@@ -2710,7 +2710,72 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="rust&#x5B57;&#x7B26;&#x4E32;">Rust&#x5B57;&#x7B26;&#x4E32;</h5>
+<p>Rust&#x8BED;&#x8A00;&#x5728;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#x53EA;&#x6709;&#x4E00;&#x79CD;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;<code>str</code>&#xFF0C;&#x5B83;&#x901A;&#x5E38;&#x4EE5;&#x501F;&#x7528;&#x7684;&#x5F62;&#x5F0F;&#x51FA;&#x73B0;(&amp;str)&#x3002;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;&#x662F;&#x4E00;&#x4E9B;&#x6307;&#x5411;&#x5B58;&#x50A8;&#x5728;&#x522B;&#x5904;&#x7684;UTF-8&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F15;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x7684;&#x6570;&#x636E;&#x88AB;&#x5B58;&#x50A8;&#x5728;&#x7A0B;&#x5E8F;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x800C;&#x5B83;&#x4EEC;&#x672C;&#x8EAB;&#x4E5F;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;&#x7684;&#x4E00;&#x79CD;&#x3002;</p>
+<h5 id="string&#x7C7B;&#x578B;"><code>String</code>&#x7C7B;&#x578B;</h5>
+<p><code>String</code>&#x7C7B;&#x578B;&#x88AB;&#x5B9A;&#x4E49;&#x5728;&#x4E86;rust&#x6807;&#x51C6;&#x5E93;&#x4E2D;&#x800C;&#x6CA1;&#x6709;&#x5185;&#x7F6E;&#x5728;&#x8BED;&#x8A00;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#xFF0C;&#x4F46;&#x662F;&#x901A;&#x5E38;&#x8BF4;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x901A;&#x5E38;&#x6307;&#x7684;&#x662F;<code>String</code>&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;<code>&amp;str</code>&#x8FD9;&#x4E24;&#x79CD;&#x3002;</p>
+<h5 id="&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;">&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;</h5>
+<ol>
+<li>&#x4F7F;&#x7528;<code>String::new()</code>&#x521B;&#x5EFA;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> s = <span class="hljs-built_in">String</span>::new();
+s.push_str(<span class="hljs-string">&quot;hello world&quot;</span>);
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the s value of {}&quot;</span>, s);
+</code></pre>
+<p>  &#x4F7F;&#x7528;<code>String::new</code>&#x521B;&#x5EFA;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;</p>
+<ol>
+<li>&#x4F7F;&#x7528;<code>to_string</code>&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> s = <span class="hljs-string">&quot;hello world!&quot;</span>.to_string();
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the s value of {}&quot;</span>, s);
+</code></pre>
+<p>  &#x53EA;&#x8981;&#x67D0;&#x4E9B;&#x7C7B;&#x578B;&#x5B9E;&#x73B0;&#x4E86;Display trait&#x7684;&#x7C7B;&#x578B;&#x624D;&#x80FD;&#x8C03;&#x7528;<code>to_string()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x6837;&#x7684;&#x5F62;&#x5F0F;&#x521B;&#x5EFA;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5982;&#x540C;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x4E00;&#x6837;&#x3002;</p>
+<p>  &#x8FD9;&#x91CC;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#x4F7F;&#x7528;<code>String::from()</code>&#x8DDF;&#x4F7F;&#x7528;<code>to_string()</code>&#x65B9;&#x6CD5;&#x751F;&#x6210;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5B57;&#x9762;&#x91CF;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;</p>
+<h5 id="&#x66F4;&#x65B0;&#x5B57;&#x7B26;&#x4E32;">&#x66F4;&#x65B0;&#x5B57;&#x7B26;&#x4E32;</h5>
+<p><code>String</code>&#x7684;&#x5927;&#x5C0F;&#x53EF;&#x4EE5;&#x589E;&#x51CF;&#xFF0C;&#x5176;&#x5185;&#x5BB9;&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x3002;&#x6B64;&#x5916;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>+</code>&#x8FD0;&#x7B97;&#x7B26;&#x6216;&#x8005;<code>format!()</code>&#x5B8F;&#x6765;&#x62FC;&#x63A5;<code>String</code></p>
+<ol>
+<li><p>&#x4F7F;&#x7528;<code>push_str</code>&#x65B9;&#x6CD5;&#x6765;&#x5411;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6DFB;&#x52A0;&#x5185;&#x5BB9;</p>
+<p><code>push_str</code>&#x63A5;&#x6536;&#x7684;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5207;&#x7247;</p>
+</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> s = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;hello world&quot;</span>);
+s.push_str(<span class="hljs-string">&quot;, hello!&quot;</span>);
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the s value of {}&quot;</span>, s);
+</code></pre>
+<ol>
+<li><p>&#x4F7F;&#x7528;<code>push</code>&#x65B9;&#x6CD5;</p>
+<p><code>push</code>&#x63A5;&#x6536;&#x7684;&#x53C2;&#x6570;&#x662F;&#x5355;&#x4E00;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;</p>
+</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> s = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;hello, &quot;</span>);
+s.push(<span class="hljs-string">&apos;1&apos;</span>);
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the s value of {}&quot;</span>, s);
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;<code>+</code>&#x8FD0;&#x7B97;&#x7B26;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> s1 = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;hello , &quot;</span>);
+<span class="hljs-keyword">let</span> s2 = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;world !&quot;</span>);
+
+<span class="hljs-keyword">let</span> s3 = s1 + &amp;<span class="hljs-number">2</span>;
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the s3 value of {}&quot;</span>, s3);
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;<code>format</code>&#x5B8F;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">let</span> s1 = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;str1 &quot;</span>);
+<span class="hljs-keyword">let</span> s2 = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;str2 &quot;</span>);
+<span class="hljs-keyword">let</span> s3 = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;str3 !&quot;</span>);
+
+<span class="hljs-keyword">let</span> s = <span class="hljs-built_in">format!</span>(<span class="hljs-string">&quot;{} - {} - {}&quot;</span>, s1, s2, s3);
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the s value of {}&quot;</span>, s);
+</code></pre>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -2753,7 +2818,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串","level":"1.7.7.1","depth":3,"next":{"title":"映射","level":"1.7.7.2","depth":3,"path":"Rust/通用集合类型/hash.md","ref":"Rust/通用集合类型/hash.md","articles":[]},"previous":{"title":"通用集合类型","level":"1.7.7","depth":2,"path":"Rust/通用集合类型/README.md","ref":"Rust/通用集合类型/README.md","articles":[{"title":"字符串","level":"1.7.7.1","depth":3,"path":"Rust/通用集合类型/字符串.md","ref":"Rust/通用集合类型/字符串.md","articles":[]},{"title":"映射","level":"1.7.7.2","depth":3,"path":"Rust/通用集合类型/hash.md","ref":"Rust/通用集合类型/hash.md","articles":[]},{"title":"动态数组","level":"1.7.7.3","depth":3,"path":"Rust/通用集合类型/vec.md","ref":"Rust/通用集合类型/vec.md","articles":[]}]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/通用集合类型/字符串.md","mtime":"2021-10-02T14:51:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T15:45:07.655Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"字符串","level":"1.7.7.1","depth":3,"next":{"title":"映射","level":"1.7.7.2","depth":3,"path":"Rust/通用集合类型/hash.md","ref":"Rust/通用集合类型/hash.md","articles":[]},"previous":{"title":"通用集合类型","level":"1.7.7","depth":2,"path":"Rust/通用集合类型/README.md","ref":"Rust/通用集合类型/README.md","articles":[{"title":"字符串","level":"1.7.7.1","depth":3,"path":"Rust/通用集合类型/字符串.md","ref":"Rust/通用集合类型/字符串.md","articles":[]},{"title":"映射","level":"1.7.7.2","depth":3,"path":"Rust/通用集合类型/hash.md","ref":"Rust/通用集合类型/hash.md","articles":[]},{"title":"动态数组","level":"1.7.7.3","depth":3,"path":"Rust/通用集合类型/vec.md","ref":"Rust/通用集合类型/vec.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/通用集合类型/字符串.md","mtime":"2022-12-08T14:46:17.970Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-14T13:18:04.730Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -2708,7 +2708,94 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="rust&#x9519;&#x8BEF;&#x5904;&#x7406;">Rust&#x9519;&#x8BEF;&#x5904;&#x7406;</h5>
+<p>Rust&#x4E2D;&#x5C06;&#x9519;&#x8BEF;&#x5206;&#x4E3A;&#x4E24;&#x5927;&#x7C7B;: &#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;&#x548C;&#x4E0D;&#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;&#x3002;&#x5BF9;&#x4E8E;&#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;&#xFF0C;&#x4F8B;&#x5982;&#x6587;&#x4EF6;&#x672A;&#x627E;&#x5230;&#x7B49;&#xFF0C;&#x5E94;&#x5F53;&#x5C06;&#x6B64;&#x9519;&#x8BEF;&#x62A5;&#x544A;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x4E0D;&#x53EF;&#x6062;&#x590D;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x4F8B;&#x5982;&#x8BBF;&#x95EE;&#x6570;&#x7EC4;&#x8D8A;&#x754C;&#x7B49;&#x3002;</p>
+<h5 id="&#x4E0D;&#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;&#x4E0E;panic">&#x4E0D;&#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;&#x4E0E;panic</h5>
+<p>Rust&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x5B8F;&#x51FD;&#x6570;<code>panic</code>.&#x7A0B;&#x5E8F;&#x4F1A;&#x5728;<code>panic</code>&#x5B8F;&#x6267;&#x884C;&#x65F6;&#x6253;&#x5370;&#x51FA;&#x4E00;&#x6BB5;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#xFF0C;&#x5C55;&#x5F00;&#x5E76;&#x6E05;&#x7406;&#x5F53;&#x524D;&#x7684;&#x8C03;&#x7528;&#x6808;&#xFF0C;&#x7136;&#x540E;&#x63A8;&#x51FA;&#x7A0B;&#x5E8F;&#x3002;</p>
+<ol>
+<li><p>panic&#x7684;&#x5C55;&#x5F00;&#x4E0E;&#x7EC8;&#x6B62;</p>
+<p>&#x5F53;panic&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x9ED8;&#x8BA4;&#x5F00;&#x59CB;&#x6808;&#x5C55;&#x5F00;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;rust&#x4F1A;&#x6CBF;&#x7740;&#x8C03;&#x7528;&#x6808;&#x7684;&#x53CD;&#x5411;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x6240;&#x6709;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x4F9D;&#x6B21;&#x6E05;&#x7406;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6240;&#x5F00;&#x53D1;&#x7684;&#x9879;&#x76EE;&#x4E3A;&#x4E86;&#x4F7F;&#x6700;&#x7EC8;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5305;&#x5C3D;&#x53EF;&#x80FD;&#x5C0F;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;<code>Cargo.toml</code>&#x6587;&#x4EF6;&#x4E2D;&#x7684;<code>[profile]</code>&#x533A;&#x57DF;&#x6DFB;&#x52A0;<code>panic=&apos;abort&apos;</code>&#x6765;&#x5C06;panic&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x4ECE;&#x5C55;&#x5F00;&#x5207;&#x6362;&#x4E3A;&#x7EC8;&#x6B62;&#x3002;</p>
+</li>
+<li><p>&#x8BBE;&#x7F6E;<code>RUST_BACKTRACE</code>&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x56DE;&#x6EAF;&#x548C;&#x786E;&#x5B9A;&#x89E6;&#x53D1;&#x9519;&#x8BEF;&#x7684;&#x539F;&#x56E0;</p>
+<p><code>RUST_BACKTRACE=1 cargo run</code></p>
+</li>
+</ol>
+<h5 id="&#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;">&#x53EF;&#x6062;&#x590D;&#x9519;&#x8BEF;</h5>
+<ol>
+<li>Rust&#x5185;&#x90E8;&#x63D0;&#x4F9B;&#x4E86;<code>Result</code>&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x679A;&#x4E3E;&#x6765;&#x5904;&#x7406;&#x53EF;&#x80FD;&#x5931;&#x8D25;&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-class"><span class="hljs-keyword">enum</span> <span class="hljs-title">Result</span></span>&lt;T, E&gt; {
+    <span class="hljs-literal">Ok</span>(T),
+    <span class="hljs-literal">Err</span>(E),
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;T&#x548C;E&#x90FD;&#x8868;&#x793A;&#x6CDB;&#x578B;&#xFF0C;T&#x4EE3;&#x8868;&#x4E86;Ok&#x53D8;&#x4F53;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x503C;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x8BE5;&#x53D8;&#x4F53;&#x4E2D;&#x7684;&#x503C;&#x4F1A;&#x5728;&#x6267;&#x884C;&#x6210;&#x529F;&#x65F6;&#x8FD4;&#x56DE;&#x3002;&#x800C;E&#x4EE3;&#x8868;&#x4E86;Err&#x53D8;&#x4F53;&#x4E2D;&#x5305;&#x542B;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#xFF0C;&#x8BE5;&#x53D8;&#x4F53;&#x4E2D;&#x7684;&#x503C;&#x4F1A;&#x5728;&#x6267;&#x884C;&#x5931;&#x8D25;&#x65F6;&#x8FD4;&#x56DE;&#x3002;</p>
+<p>&#x4EE5;&#x4E00;&#x4E2A;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;</p>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::fs::File;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> f = File::open(<span class="hljs-string">&quot;test.txt&quot;</span>);
+
+    <span class="hljs-keyword">let</span> f = <span class="hljs-keyword">match</span> f {
+        <span class="hljs-literal">Ok</span>(file) =&gt; file,
+        <span class="hljs-literal">Err</span>(err) =&gt; {
+            <span class="hljs-built_in">panic!</span>(<span class="hljs-string">&quot;can&apos;t open the test.txt!&quot;</span>)
+        },
+    };
+}
+</code></pre>
+<ol>
+<li>&#x5931;&#x8D25;&#x65F6;&#x51FA;&#x53D1;panic&#x7684;&#x5FEB;&#x6377;&#x65B9;&#x5F0F;: <code>unwrap</code>&#x548C;<code>expect</code></li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::fs:File;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">main</span></span>() {
+    <span class="hljs-keyword">let</span> f = File::open(<span class="hljs-string">&quot;test.txt&quot;</span>).unwrap();
+
+    <span class="hljs-keyword">let</span> fs = File::open(<span class="hljs-string">&quot;test.txt&quot;</span>).expect(<span class="hljs-string">&quot;can&apos;t open the file!&quot;</span>);
+}
+</code></pre>
+<ol>
+<li>&#x9519;&#x8BEF;&#x7684;&#x4F20;&#x64AD;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::io;
+<span class="hljs-keyword">use</span> std::io::Read;
+<span class="hljs-keyword">use</span> std::fs::File;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">read_file</span></span>() -&gt; <span class="hljs-built_in">Result</span>&lt;<span class="hljs-built_in">String</span>, io::Error&gt; {
+    <span class="hljs-keyword">let</span> f = file::open(<span class="hljs-string">&quot;test.txt&quot;</span>);
+
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> f = <span class="hljs-keyword">match</span> f {
+        <span class="hljs-literal">Ok</span>(file) =&gt; file,
+        <span class="hljs-literal">Err</span>(err) =&gt; <span class="hljs-keyword">return</span> <span class="hljs-literal">Err</span>(err),
+    };
+
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> s = <span class="hljs-built_in">String</span>::new();
+    <span class="hljs-keyword">match</span> f.read_to_string(&amp;<span class="hljs-keyword">mut</span> s) {
+        <span class="hljs-literal">Ok</span>(_) =&gt; <span class="hljs-literal">Ok</span>(s),
+        <span class="hljs-literal">Err</span>(e) =&gt; <span class="hljs-literal">Err</span>(e),
+    }
+}
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;<code>&#xFF1F;</code>&#x8FD0;&#x7B97;&#x7B26;&#x7B80;&#x5316;&#x9519;&#x8BEF;&#x5904;&#x7406;&#x64CD;&#x4F5C;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::io;
+<span class="hljs-keyword">use</span> std::io::Read;
+<span class="hljs-keyword">use</span> std::fs::File;
+
+<span class="hljs-function"><span class="hljs-keyword">fn</span> <span class="hljs-title">read_file</span></span>() -&gt; <span class="hljs-built_in">Result</span>&lt;<span class="hljs-built_in">String</span>, io::Error&gt; {
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> s = <span class="hljs-built_in">String</span>::new();
+
+    File::open(<span class="hljs-string">&quot;test.txt&quot;</span>)?.read_to_string(&amp;<span class="hljs-keyword">mut</span> s)?;
+
+    <span class="hljs-literal">Ok</span>(s)
+}
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;<code>&#xFF1F;</code>&#x8FD0;&#x7B97;&#x7B26;&#x53EA;&#x80FD;&#x88AB;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;Result&#x7684;&#x51FD;&#x6570;</p>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -2747,7 +2834,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Rust错误处理","level":"1.7.9","depth":2,"next":{"title":"Lua语言","level":"1.8","depth":1,"ref":"","articles":[{"title":"Lua数据类型","level":"1.8.1","depth":2,"path":"lua/数据类型/README.md","ref":"lua/数据类型/README.md","articles":[]},{"title":"Lua变量","level":"1.8.2","depth":2,"path":"lua/变量/README.md","ref":"lua/变量/README.md","articles":[]},{"title":"Lua运算符","level":"1.8.3","depth":2,"path":"lua/运算符/README.md","ref":"lua/运算符/README.md","articles":[]},{"title":"Lua控制结构","level":"1.8.4","depth":2,"path":"lua/控制结构/README.md","ref":"lua/控制结构/README.md","articles":[]},{"title":"Lua循环","level":"1.8.5","depth":2,"path":"lua/循环/README.md","ref":"lua/循环/README.md","articles":[]},{"title":"Lua数组","level":"1.8.6","depth":2,"path":"lua/数组/README.md","ref":"lua/数组/README.md","articles":[]},{"title":"Lua函数","level":"1.8.7","depth":2,"path":"lua/函数/README.md","ref":"lua/函数/README.md","articles":[]},{"title":"Lua表","level":"1.8.8","depth":2,"path":"lua/表/README.md","ref":"lua/表/README.md","articles":[]},{"title":"Lua元表","level":"1.8.9","depth":2,"path":"lua/元表/README.md","ref":"lua/元表/README.md","articles":[]},{"title":"Lua面向对象","level":"1.8.10","depth":2,"path":"lua/OOP/README.md","ref":"lua/OOP/README.md","articles":[]}]},"previous":{"title":"方法","level":"1.7.8.2","depth":3,"path":"Rust/结构和方法/方法.md","ref":"Rust/结构和方法/方法.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/错误处理/error.md","mtime":"2021-10-02T14:52:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T15:45:07.655Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Rust错误处理","level":"1.7.9","depth":2,"next":{"title":"Lua语言","level":"1.8","depth":1,"ref":"","articles":[{"title":"Lua数据类型","level":"1.8.1","depth":2,"path":"lua/数据类型/README.md","ref":"lua/数据类型/README.md","articles":[]},{"title":"Lua变量","level":"1.8.2","depth":2,"path":"lua/变量/README.md","ref":"lua/变量/README.md","articles":[]},{"title":"Lua运算符","level":"1.8.3","depth":2,"path":"lua/运算符/README.md","ref":"lua/运算符/README.md","articles":[]},{"title":"Lua控制结构","level":"1.8.4","depth":2,"path":"lua/控制结构/README.md","ref":"lua/控制结构/README.md","articles":[]},{"title":"Lua循环","level":"1.8.5","depth":2,"path":"lua/循环/README.md","ref":"lua/循环/README.md","articles":[]},{"title":"Lua数组","level":"1.8.6","depth":2,"path":"lua/数组/README.md","ref":"lua/数组/README.md","articles":[]},{"title":"Lua函数","level":"1.8.7","depth":2,"path":"lua/函数/README.md","ref":"lua/函数/README.md","articles":[]},{"title":"Lua表","level":"1.8.8","depth":2,"path":"lua/表/README.md","ref":"lua/表/README.md","articles":[]},{"title":"Lua元表","level":"1.8.9","depth":2,"path":"lua/元表/README.md","ref":"lua/元表/README.md","articles":[]},{"title":"Lua面向对象","level":"1.8.10","depth":2,"path":"lua/OOP/README.md","ref":"lua/OOP/README.md","articles":[]}]},"previous":{"title":"方法","level":"1.7.8.2","depth":3,"path":"Rust/结构和方法/方法.md","ref":"Rust/结构和方法/方法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/错误处理/error.md","mtime":"2022-12-12T12:53:57.464Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-14T13:18:04.730Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

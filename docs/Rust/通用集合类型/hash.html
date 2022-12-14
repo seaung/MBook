@@ -2710,7 +2710,89 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h5 id="&#x54C8;&#x5E0C;&#x6620;&#x5C04;">&#x54C8;&#x5E0C;&#x6620;&#x5C04;</h5>
+<p>Rust&#x4E2D;&#x7684;&#x54C8;&#x5E0C;&#x6620;&#x5C04;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5176;&#x5B9E;&#x8DDF;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E00;&#x6837;&#x90FD;&#x662F;&#x5B58;&#x50A8;key&#x548C;value&#x7684;&#xFF0C;&#x4F8B;&#x5982;python&#x7684;&#x5B57;&#x5178;&#x3002;</p>
+<h5 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x54C8;&#x5E0C;&#x6620;&#x5C04;">&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</h5>
+<ol>
+<li>&#x4F7F;&#x7528;<code>new()</code>&#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::collections::HashMap;
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> dict = HashMap::new();
+
+dict.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Red&quot;</span>), <span class="hljs-number">0</span>);
+dict.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Yellow&quot;</span>), <span class="hljs-number">1</span>);
+dict.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Blue&quot;</span>), <span class="hljs-number">2</span>);
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the dict red attr of {}&quot;</span>, dic[<span class="hljs-string">&quot;Red&quot;</span>]);
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;<code>collect</code>&#x65B9;&#x6CD5;&#x6765;&#x5C06;&#x52A8;&#x6001;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::collections::HashMap;
+
+
+<span class="hljs-keyword">let</span> items = <span class="hljs-built_in">vec!</span>[<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Red&quot;</span>), <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Yellow&quot;</span>), <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Blue&quot;</span>)];
+<span class="hljs-keyword">let</span> init_value = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+
+<span class="hljs-keyword">let</span> result: HashMap&lt;_, _&gt; = items.iter().zip(init_value.iter()).collect();
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the result red value of {}&quot;</span>, result[<span class="hljs-string">&quot;Red&quot;</span>]);
+</code></pre>
+<h5 id="&#x54C8;&#x5E0C;&#x6620;&#x5C04;&#x4E0E;&#x6240;&#x6709;&#x6743;">&#x54C8;&#x5E0C;&#x6620;&#x5C04;&#x4E0E;&#x6240;&#x6709;&#x6743;</h5>
+<p>&#x5BF9;&#x4E8E;&#x90A3;&#x4E9B;&#x5B9E;&#x73B0;&#x4E86;<code>Copy</code>&#x7684;trait&#x7C7B;&#x578B;&#xFF0C;&#x4F8B;&#x5982;i32&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x4F1A;&#x88AB;&#x7B80;&#x5355;&#x5730;&#x590D;&#x5236;&#x5230;&#x54C8;&#x5E0C;&#x6620;&#x5C04;&#x4E2D;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x50CF;<code>String</code>&#x8FD9;&#x79CD;&#x6301;&#x6709;&#x6240;&#x6709;&#x6743;&#x7684;&#x503C;&#xFF0C;&#x5176;&#x503C;&#x5C06;&#x4F1A;&#x8F6C;&#x79FB;&#x4E14;&#x6240;&#x6709;&#x6743;&#x4F1A;&#x8F6C;&#x79FB;&#x5230;&#x54C8;&#x5E0C;&#x6620;&#x5C04;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::collections::HashMap;
+
+<span class="hljs-keyword">let</span> first = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;red&quot;</span>);
+<span class="hljs-keyword">let</span> second = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;blue&quot;</span>);
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> item = HashMap::new();
+item.insert(<span class="hljs-string">&quot;one&quot;</span>, first);
+item.insert(<span class="hljs-string">&quot;tow&quot;</span>, second);
+<span class="hljs-comment">// first &#x548C;second&#x5C06;&#x4E0D;&#x518D;&#x6709;&#x6548;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x7684;&#x6240;&#x6709;&#x6743;&#x53D1;&#x751F;&#x4E86;&#x8F6C;&#x79FB;</span>
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the item value of {}&quot;</span>, item[<span class="hljs-string">&quot;one&quot;</span>]);
+</code></pre>
+<h5 id="&#x8BBF;&#x95EE;&#x54C8;&#x5E0C;&#x6620;&#x5C04;">&#x8BBF;&#x95EE;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</h5>
+<ol>
+<li>&#x4F7F;&#x7528;<code>get</code>&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::collections::HashMap;
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> items = HashMap::new();
+items.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Red&quot;</span>), <span class="hljs-number">0</span>);
+items.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Blue&quot;</span>), <span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">let</span> value = <span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Red&quot;</span>);
+<span class="hljs-keyword">let</span> val = items.get(&amp;value);
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the val value of {}&quot;</span>, val);
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>get</code>&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Option&lt;&amp;V&gt;</code>&#x679A;&#x4E3E;</p>
+<ol>
+<li>&#x4F7F;&#x7528;&#x952E;&#x6765;&#x8BBF;&#x95EE;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</li>
+</ol>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::collections::HashMap;
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> items = HashMap::new();
+items.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Red&quot;</span>), <span class="hljs-number">0</span>);
+items.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Blue&quot;</span>), <span class="hljs-number">1</span>);
+
+<span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the value of {}&quot;</span>, items[<span class="hljs-string">&quot;Red&quot;</span>]);
+</code></pre>
+<h5 id="&#x904D;&#x5386;&#x54C8;&#x5E0C;&#x6620;&#x5C04;">&#x904D;&#x5386;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</h5>
+<pre><code class="lang-rust"><span class="hljs-keyword">use</span> std::collections::HashMap;
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut</span> items = HashMap::new();
+items.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Red&quot;</span>), <span class="hljs-number">0</span>);
+items.insert(<span class="hljs-built_in">String</span>::from(<span class="hljs-string">&quot;Blue&quot;</span>), <span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">for</span> (key, value) <span class="hljs-keyword">in</span> &amp;items {
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">&quot;the key {} - the value {}&quot;</span>, key, value);
+}
+</code></pre>
+<h5 id="&#x66F4;&#x65B0;&#x54C8;&#x5E0C;&#x6620;&#x5C04;">&#x66F4;&#x65B0;&#x54C8;&#x5E0C;&#x6620;&#x5C04;</h5>
+<hr>
+<p>that&apos;s all</p>
+
                                 
                                 </section>
                             
@@ -2753,7 +2835,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"映射","level":"1.7.7.2","depth":3,"next":{"title":"动态数组","level":"1.7.7.3","depth":3,"path":"Rust/通用集合类型/vec.md","ref":"Rust/通用集合类型/vec.md","articles":[]},"previous":{"title":"字符串","level":"1.7.7.1","depth":3,"path":"Rust/通用集合类型/字符串.md","ref":"Rust/通用集合类型/字符串.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/通用集合类型/hash.md","mtime":"2021-10-28T05:25:56.890Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-04T15:45:07.655Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"映射","level":"1.7.7.2","depth":3,"next":{"title":"动态数组","level":"1.7.7.3","depth":3,"path":"Rust/通用集合类型/vec.md","ref":"Rust/通用集合类型/vec.md","articles":[]},"previous":{"title":"字符串","level":"1.7.7.1","depth":3,"path":"Rust/通用集合类型/字符串.md","ref":"Rust/通用集合类型/字符串.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rust/通用集合类型/hash.md","mtime":"2022-12-10T14:17:32.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-12-14T13:18:04.730Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
