@@ -55,6 +55,30 @@ uint16_t ntohs(uint16_t net16bitvalue);
 uint32_t ntohl(uint32_t net32bitvalue);
 ```
 
+##### 字节操纵函数
+
+1. `4.2BSD`提供的函数
+
+```c
+#include<strings.h>
+
+void bzero(void *dest, size_t nbytes); // 将目标字符串中指定数目的字节置为0
+void bcopy(const void *src, void *dest, size_t nbytes); // 将指定数目的字节从源字符串移到目标字符串中
+void bcmp(const void *ptr1, const void *ptr1, size_t nbytes); // 比较两个任意的字节串，若相同则返回0,否则返回非0
+```
+
+2. `ANSI C`标准提供的函数
+
+```c
+#include<strings.h>
+
+void *memset(void *dest, int c, size_t n);
+void *memcpy(void *dest, const void *src, size_t nbytes);
+int memcmp(const void *ptr1, const void *ptr2, size_t nbytes);
+```
+
+
+
 
 
 
