@@ -7,6 +7,8 @@
   * [指针](C/pointer.md)
   * [指针和函数](C/function_and_pointer.md)
   * [文件通用操作方法1](C/文件通用操作方法.md)
+  * [socket相关函数](C/Csocket函数.md)
+  * [socket相关函数2](C/Csocket.md)
   * [进程相关1](C/C进程相关函数介绍.md)
   * [UDP相关函数](C/UDP相关函数.md)
   * [select相关函数](C/select.md)
